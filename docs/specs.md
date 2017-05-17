@@ -15,7 +15,7 @@ Le module Reach comporte deux connecteurs DF13 et est fourni avec tous les câbl
 * Connecteur femelle: Hirose DF13-6S-1.25C ([Digikey](http://www.digikey.com/product-search/en?keywords=DF13-6S-1.25C), [Mouser](http://eu.mouser.com/ProductDetail/Hirose-Electric/DF13-6S-125C/?qs=%2fha2pyFaduhJ5h7X7LLPzEL0u%2f%252b1ZTztM8mMa9tEuYmcKFXQSgLZyQ%3d%3d))
 
 Le connecteur antenne est de type MCX, pour connecter un cable d'antenne SMA ou TNX vous pouvez utiliser un des nombreux adapteurs.
- ([cable](http://www.digikey.com/product-detail/en/CAB.0130/931-1102-ND/2332729), [adapter](http://www.digikey.com/product-detail/en/242127/ACX1348-ND/1012025))
+ ([câble](http://www.digikey.com/product-detail/en/CAB.0130/931-1102-ND/2332729), [adapteur](http://www.digikey.com/product-detail/en/242127/ACX1348-ND/1012025))
 
 <div style="text-align: center;"><img src="../img/reach/specs/sma-mcx-cable.jpg" style="width: 150px;"><img src="../img/reach/specs/sma-mcx-adapter.jpg" style="width: 150px;"></div><br>
 
@@ -34,55 +34,55 @@ Lors de la conception d'un boitier gardez à l'esprit que vous ne devez rien pla
 
 Les boitiers en impression 3D suivants sont disponibles pour les utilisateurs des modules Reach:
 
-**Reach case model C:**
+**Boitier Reach modèle C:**
 
 <script src="https://embed.github.com/view/3d/emlid/hardware/master/Reach_cases/Reach_case_assembly_Rev_C.STL"></script>
 
 Télécharger la [moitié supérieure et inférieure](https://github.com/emlid/hardware/tree/master/Reach_cases/Rev_C_parts) du boitier pour l'imprimer en 3D.
 
-**Reach case model D:**
+**Boitier Reach modèle D:**
 
 <script src="https://embed.github.com/view/3d/emlid/hardware/master/Reach_cases/Reach_case_assembly_Rev_D.STL"></script>
 
 Télécharger la [moitié supérieure et inférieure](https://github.com/emlid/hardware/tree/master/Reach_cases/Rev_D_parts) du boitier pour l'imprimer en 3D.
 
-**Reach case model E:**
+**Boitier Reach modèle E:**
 
 <script src="https://embed.github.com/view/3d/emlid/hardware/master/Reach_cases/Reach_case_assembly_Rev_E.STL"></script>
 
 Télécharger la [moitié supérieure et inférieure](https://github.com/emlid/hardware/tree/master/Reach_cases/Rev_E_parts) du boitier pour l'imprimer en 3D.
 
-Lors de l'assemblage, les boitiers D et E nécessitent une vise DIN-7981 (diamètre de filetage 2.2 mm, longueur 6.5 ou 9.5 mm). Le boitier C peut être assemblée avec un skotch.
+Lors de l'assemblage, les boitiers D et E nécessitent une vise DIN-7981 (diamètre de filetage 2.2 mm, longueur 6.5 ou 9.5 mm). Le boitier C peut être assemblé avec un skotch.
 
 ## Caractéristiques électriques
 
 ### Valeurs maximales
 
-|Name                                       | Value                |
-|-------------------------------------------|----------------------|
-| Inout voltage on USB and DF13 connectors  | 4.75 - 5.5 V         |
-| Logic levels on all pins                  | 3.3 V                |
-| Max input voltage on all pins             | 5.5 V                |
-| Antenna DC bias                           | 3.3 V                |
-| Antenna output current                    | 100 mA               |
-| Max current consumption @5V               | 500 mA               |
-| Normal current consumption @5V            | 200 mA               |
-| Current limit on USB OTG                  | 1000 mA              |
-| Temperature range                         | 0 +40 C (-40 +85 C)^ |
+|Nom                                                | Valeur                |
+|---------------------------------------------------|-----------------------|
+| Tension d'entrée sur les connecteurs USB et DF13  | 4.75 - 5.5 V          |
+| Niveaux logiques sur toutes les broches           | 3.3 V                 |
+| Tension d'entrée maximale sur toutes les broches  | 5.5 V                 |
+| Biais DC Antenne                                  | 3.3 V                 |
+| Courant de sortie de l'antenne                    | 100 mA                |
+| Consommation maximale de courant @5V              | 500 mA                |
+| Consommation nominale de courant @5V              | 200 mA                |
+| Courant limite sur le port USB OTG                | 1000 mA               |
+| Plage de température                              | 0 +40 C (-40 +85 C)^  |
 
-Officially Intel Edison is rated 0C to 40C, but Intel also claims they are performing temperature tests with good results, but just are not yet ready to officially rate Edison as extended temperature range device. Users report successful tests down to -40 C.
+Officiellement, la carte Intel Edison est spécifiée 0C à 40C, mais Intel affirme qu'ils réalisent des tests de température avec de bons résultats mais qu'ils ne sont encore par prêts pour étendre les spécifications officielles au delà. Des utilisateurs rapportent des tests réussis à -40C.
 
-### Connectors pinout
+### Brochage des connecteurs
 <div style="text-align: center;"><img src="../img/reach/specs/reach-connectors.png" style="width: 550px;"></div><br>
 
-* GPIO46, GPIO77, PWM, SCL, SDA, TX, RX are connected to Intel Edison via buffers and are 3.3 V logic level, 5 V tolerant.
-* TX and RX belong to UART1 on Intel Edison
-* SCL and SDA belong to I2C1 on Intel Edison, I2C1 also could be used to communicate with internal magnetometer in MPU9250.
-* PWM belongs to PWM3 GPIO183 on Intel Edison
-* Time Mark input is connected directly to U-blox chip for low latency, it includes an over-voltage clamp, pull up and current limiting resistor.
+* GPIO46, GPIO77, PWM, SCL, SDA, TX, RX sont connectés à la carte Intel Edison via des buffers et fonctionnent avec des niveaux logiques de 3.3V, mais tolérants au 5V.
+* TX et RX correspondent à l'UART1 de la carte Intel Edison.
+* SCL et SDA correspondent à I2C1 de la carte Intel Edison, I2C1 peut aussi être utilisé pour communiquer avec le magnétomètre interne du MPU9250.
+* PWM correspond au PWM3 GPIO183 de la carte Intel Edison.
+* L'entrée Time Mark est directement connectée à la puce U-blox pour une latence réduite, inclue un limiteur de surtension, une résistance de type pull up et de limitation de courant.
 
 ### USB OTG
 
 <div style="text-align: center;"><img src="../img/reach/specs/otg-connection.png" style="width: 550px;"></div><br>
 
-Reach can both receive power from USB, acting as a device and source power to the port acting as a host. To use Reach in OTG mode you will need to connect 5V power source to DF13 connector pins (5 V, GND) and use OTG USB cable.
+Le module Reach peut à la fois être alimenté par l'USB, agir en tant qu'appareil et source de courant quand il est connecté comme Hôte sur le port. Pour utiliser le module Reach en OTG il est nécessaire de connecter une alimentation 5V par les broches du connecteur DF13 (5V et GND), et d'utiliser un câble USB OTG.

@@ -27,9 +27,9 @@ More on power supply you can read [here](power-supply/).
 
 ## Connecting and placing GPS antenna
 
-* Plug antenna cable into MCX socket on Reach. 
+* Plug antenna cable into MCX socket on Reach.
 
-* Place antenna on a ground plane. It could be a cut piece of metal > 100mm in diameter, roof of a car or metal roof of a building. 
+* Place antenna on a ground plane. It could be a cut piece of metal > 100mm in diameter, roof of a car or metal roof of a building.
 
 !!! warning
     There **should be no** obstacles near the antenna that could block the sky view higher than 30 degrees above horizon.
@@ -62,13 +62,13 @@ After connecting to the network hosted by reach, open a web browser on your smar
 
 <div style="text-align: center;"><img src="../img/reach/quickstart/reach_view_updater_wifi.png" style="width: 350px;"></div><br>
 
-* Press on your added network and click Connect. 
+* Press on your added network and click Connect.
 
 <div style="text-align: center;"><img src="../img/reach/quickstart/reach_view_updater_wifi_connect.png" style="width: 600px;"></div><br>
 
 * After that Reach device will attempt to connect your Wi-Fi network.
 
-!!! tip 
+!!! tip
     If your device did not connect to Wi-Fi network it will switch to hotspot mode.
     You can find Reach on **http://reach.local** or **http://192.168.42.1**.
     Check your network name and password and try again.  
@@ -83,7 +83,7 @@ For this you can use:
 
 * ["**Nmap**"](https://nmap.org/) on Linux/OS X.
 
-* ["**Zenmap**"](https://nmap.org/zenmap/) on Windows. 
+* ["**Zenmap**"](https://nmap.org/zenmap/) on Windows.
 
 <div style="text-align: center;"><img src="../img/reach/quickstart/fing.png" style="width: 500px;"></div><br>
 
@@ -134,9 +134,9 @@ By default, base output stream will be available on a **TCP port 9000**.
 
 ### Setting up rover
 
-* Connect to the second Reach. 
+* Connect to the second Reach.
 
-* Navigate to **Correction input** tab. 
+* Navigate to **Correction input** tab.
 
 <div style="text-align: center;"><img src="../img/reach/quickstart/reach_view_correction_input_tab.png" style="width: 800px;"></div><br>
 
@@ -148,7 +148,7 @@ By default, base output stream will be available on a **TCP port 9000**.
 
 * Add base correction port in **Port** field. Default one is **9000**.
 
-* Choose correction input **Format**. Default one is **RTCM3**. 
+* Choose correction input **Format**. Default one is **RTCM3**.
 
 <div style="text-align: center;"><img src="../img/reach/quickstart/reach_view_correction_input_tcp.png" style="width: 800px;"></div><br>
 
@@ -163,7 +163,7 @@ By default, base output stream will be available on a **TCP port 9000**.
 
 You can see a bar chart with satellite levels, RTK parameters, positioning mode and solution status, current coordinates of rover and base in LLH format, velocity and map. In this quick tutorial, positioning mode is set to "Kinematic" which is the main RTK mode.
 
-* If everything has been set up correctly, **Solution status** will be **Float** and **you should see grey bars near satellite levels bars**. 
+* If everything has been set up correctly, **Solution status** will be **Float** and **you should see grey bars near satellite levels bars**.
 
 !!! warning ""
     **Float** means that base corrections are now taken into consideration and positioning is relative to base coordinates, but the integer ambiguity is not resolved.  

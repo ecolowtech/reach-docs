@@ -1,54 +1,56 @@
 
-Reach supports various accessories via it's built-in USB OTG port and UART interface on the DF13 connector
+Le module Reach est compatible avec différents accessoires par son port USB OTG intégré et son interface UART du connecteur DF13
 
 ### Radio
 
-It is possible to connect radio modules to Reach in order to obtain corrections or send calculated coordinates.
+Il est possible de connecter des modules radio au Reach afin de recevoir des corrections de position ou d'envoyer les coordonnées calculées
 
-Most radios nowadays use UART or USB as a connection.
+Aujourd'hui la plupart des radios fonctionnent avec une interface UART ou USB.
 
-#### Connecting UART radio
+#### Connecter une radio UART
 
-Logic level on UART in Reach is 3.3V but pins are 5V tolerant, so you can use both 3.3V and 5V logic level radios.
+Les niveaux logiques sur l'UART du Reach sont en 3.3V mais les broches sont tolérantes au 5V, donc vous pouvez aussi bien utiliser des radios utilisants des niveaux logiques en 3.3V ou en 5V.
 
-UART radio is accessible on Reach as a serial device with the name **ttyMFD2**.
+Une radio UART est accessible depuis le module Reach en tant que périphérique série avec le nom **ttyMFD2**.
 
-To connect UART radio to Reach use upper DF13 port (the one near the USB).
+Pour connecter une radio UART au Reach il faut utiliser le port DF13 du dessus (celui à côté de l'USB).
 
-| Reach pins | Radio pins |
-|:----------:|:----------:|
-|     +5V    |     +5V    |
-|     TX     |     RX     |
-|     RX     |     TX     |
-|     GND    |     GND    |
 
-#### 3DR Radio
+| broches Reach | broches Radio |
+|:-------------:|:-------------:|
+|     +5V       |     +5V       |
+|     TX        |     RX        |
+|     RX        |     TX        |
+|     GND       |     GND       |
+
+#### Radio 3DR
 
 <div style="text-align: center;"><img src="../img/reach/hardware-integration/reach-3dr-radio.png" style="width: 550px;"></div><br>
 
-Connection diagram for 3DR Radio v2:
+Schéma de raccordement pour une 3DR Radio v2:
 
 <div style="text-align: center;"><img src="../img/reach/hardware-integration/reach-3dr-radio-connection-map.png" style="width: 550px;"></div><br>
 
-3DR Radio can also be connected over USB.
+Une radio 3DR peut aussi être connectée par l'USB.
 
-Please note that a bug in the **Reach image before v1.2** prevents the Rover module from booting while it`s receiving UART correction signals from the base module. Current fix is powering up base module after the rover module has booted (LED are blinking red/blue/white).
+Veuillez noter qu'un erreur dans **l'image Reach avant v1.2** empêche le récepteur mobile (Rover) de démarrer tant qu'il reçoit des signaux de corrections sur son port UART envoyé depuis le récepteur fixe (Base).
+La solution est d'alimenter le récepteur fixe (Base) une fois que le récepteur mobile (Rover) a démarré (LED clignottantes rouge/bleu/blanc).
 
-#### RFD900 Radio
+#### Radio RFD900
 
 <div style="text-align: center;"><img src="../img/reach/hardware-integration/reach-rfd900-radio.png" style="width: 550px;"></div><br>
 
-Connection diagram for RFD900 radio:
+Schéma de raccordement pour un radio RFD900:
 
 <div style="text-align: center;"><img src="../img/reach/hardware-integration/reach-rfd900-radio-connection-map.png" style="width: 550px;"></div><br>
 
 !!! attention
-    Please mind that RFD can consume up to 800ma in peaks so make sure that your power source can provide enough power for both Reach and RFD900.
+    Veuillez garder à l'esprit qu'une radio RFD peut avoir des pics de consommation jusqu'à 800mA donc assurez-vous que l'alimentation peut délivrer suffisamment pour alimenter à la fois le module Reach et la radio RFD900.
 
-#### Connecting USB radio
+#### Connecter une radio USB
 
 <div style="text-align: center;"><img src="../img/reach/hardware-integration/reach-usb-radio.png" style="width: 550px;"></div><br>
 
-To connect USB radio to Reach use USB-OTG cable provided with the package.
-Plug radio into USB-F port and plug Micro-USB end of the cable in Reach.
-**When using USB port in OTG mode Reach has to be [powered](power-supply.md) over one of the DF13 ports**.
+Pour connecter une radio USB au module Reach il convient d'utiliser le câble USB-OTH fourni dans la boite.
+Brancher la radio sur le port USB-F et brancher l'extrémité Micro-USB du câble au module Reach.
+**Si un port USB est utilisé en OTG, alors le module Reach doit être [alimenté](power-supply.md) par un des ports DF13**.

@@ -1,24 +1,24 @@
-## Reach boot LED sequence
+## Séquence LED au démarrage du Reach
 
-During boot Reach will go through 3 steps:
+Au démarrage, le module Reach traverse 3 phases:
 
-* Network scan
-* Time sync
-* ReachView launch
+* Recherche réseau
+* Synchronisation temporelle
+* Démarrage de ReachView
 
-### Network scan
+### Recherche réseau
 
-Reach will indicate a network scan with <font color="yellow">yellow</font> blinks. If a known Wi-Fi network is detected, Reach will connect to it and set the LED <font color="blue">blue</font>. If the scan found no familiar networks, a hotspot is started and the LED will light <font color="green">green</font>.
+Le module Reach indique la recherche réseau par un clignottement <font color="yellow">jaune</font>. Si un réseau Wi-Fi connu est détecté, le module Reach s'y connectera et la LED devient <font color="blue">bleue</font>. Si aucun réseau connu n'est détécté, un point d'accès Wi-Fi est démarré et la LED devient <font color="green">verte</font>.
 
-### Time sync
+### Synchronisation temporelle
 
-Time sync is indicated by <font color="magenta">magenta</font> blinks. They are added to the existing networking state indicator. That means that time sync in a hotspot mode will produce <font color="green">green</font>/<font color="magenta">magenta</font> blinks and time sync in a client mode will produce <font color="blue">blue</font>/<font color="magenta">magenta</font> blinks.
+La synchronisation temporelle est indiquée par un clignottement <font color="magenta">magenta</font>. Ils sont ajoutés aux autres indications de recherche de réseau. Cela signifie qu'un synchronisation temporelle en cours alors que le point d'accès Wi-Fi est démarré affichera des clignottements <font color="green">verts</font>/<font color="magenta">magenta</font> et la synchronisation temporelle après avoir rejoint un réseau Wi-Fi connu affichera des clignottements <font color="blue">bleus</font>/<font color="magenta">magenta</font>.
 
-### ReachView launch
+### Démarrage de ReachView
 
 !!! note
-    The app will not launch until the time sync is complete. Internet connection allows this to happen automatically, but in hotspot mode Reach requires a connected antenna with some satellite visibility.
+    L'application ne démarre pas tant que la synchronisation temporelle n'est pas effectuée. Une connexion internet assure cela automatiquement, mais en mode point d'accès Wi-Fi le module Reach nécessite une antenne connectée et une certaine visibilité satellite.
 
-After the time sync is done the <font color="magenta">magenta</font> blinks stop and ReachView will be launched. Successful launch will be signified with a <font color="green">green</font> light, fail will produce a <font color="red">red</font> light.
+Une fois la synchronisation temporelle terminée les clignottements <font color="magenta">magenta</font> s'arrêtent et ReachView démarre. Une démarrage réussi sera indiqué par une couleur <font color="green">verte</font>, alors qu'une erreur sera indiquée en <font color="red">rouge</font>.
 
-**More interactive and informative LED statuses will be introduced in one of the future updates.**
+**Les statuts des LED donneront plus d'indications sur les interactions et informations dans l'une des prochaines mises à jour.**

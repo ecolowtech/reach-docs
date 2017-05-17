@@ -1,61 +1,62 @@
-## Mechanical specs
+## Caractéristiques Mécaniques
 
 ### Dimensions
 
-Reach RTK module is a tiny device, it is only a few millimeters larger than Intel Edison that it houses.
+Le module Reach RTK est un petit appareil, sa taille est de quelques millimètres plus large que la carte Intel Edison qu'il intègre.
 
 <div style="text-align: center;"><img src="../img/reach/specs/reach-dimensions.png" style="width: 350px;"></div><br>
 
-### Connectors mating parts
+### Elements de connexion
 
-Reach has dual DF13 connectors and comes with all required cables to connect to other devices. In case you would like to make you own cable assembly here are the appropriate connector part numbers:
+Le module Reach comporte deux connecteurs DF13 et est fourni avec tous les câbles requis pour se connecter à d'autres appareils. Si vous avez besoin de réaliser vos propres câbles de connexion voici les références des connecteurs utilisés:
 
-* On Reach: Hirose DF13-6P-1.25H(50) ([Digikey](http://www.digikey.com/product-detail/en/DF13-6P-1.25H%2850%29/H3354-ND/530653), [Mouser](http://eu.mouser.com/ProductDetail/Hirose-Electric/DF13-6P-125H50/?qs=%2fha2pyFaduilOJdMONLaLBwaFNH0V7VnzXasUV9hMRidfNFMCnSnIA%3d%3d)).
+* Sur le module Reach: Hirose DF13-6P-1.25H(50) ([Digikey](http://www.digikey.com/product-detail/en/DF13-6P-1.25H%2850%29/H3354-ND/530653), [Mouser](http://eu.mouser.com/ProductDetail/Hirose-Electric/DF13-6P-125H50/?qs=%2fha2pyFaduilOJdMONLaLBwaFNH0V7VnzXasUV9hMRidfNFMCnSnIA%3d%3d)).
 
-* Receptacle: Hirose DF13-6S-1.25C ([Digikey](http://www.digikey.com/product-search/en?keywords=DF13-6S-1.25C), [Mouser](http://eu.mouser.com/ProductDetail/Hirose-Electric/DF13-6S-125C/?qs=%2fha2pyFaduhJ5h7X7LLPzEL0u%2f%252b1ZTztM8mMa9tEuYmcKFXQSgLZyQ%3d%3d))
+* Connecteur femelle: Hirose DF13-6S-1.25C ([Digikey](http://www.digikey.com/product-search/en?keywords=DF13-6S-1.25C), [Mouser](http://eu.mouser.com/ProductDetail/Hirose-Electric/DF13-6S-125C/?qs=%2fha2pyFaduhJ5h7X7LLPzEL0u%2f%252b1ZTztM8mMa9tEuYmcKFXQSgLZyQ%3d%3d))
 
-Antenna connector is MCX, to connect to SMA or TNC antenna cable you can use one of the numerous adapters. ([cable](http://www.digikey.com/product-detail/en/CAB.0130/931-1102-ND/2332729), [adapter](http://www.digikey.com/product-detail/en/242127/ACX1348-ND/1012025))
+Le connecteur antenne est de type MCX, pour connecter un cable d'antenne SMA ou TNX vous pouvez utiliser un des nombreux adapteurs.
+ ([cable](http://www.digikey.com/product-detail/en/CAB.0130/931-1102-ND/2332729), [adapter](http://www.digikey.com/product-detail/en/242127/ACX1348-ND/1012025))
 
 <div style="text-align: center;"><img src="../img/reach/specs/sma-mcx-cable.jpg" style="width: 150px;"><img src="../img/reach/specs/sma-mcx-adapter.jpg" style="width: 150px;"></div><br>
 
-### 3D model
+### Modèle 3D
 
-This 3D model can be used as a reference for case design. Please note that Reach comes in protective heatshrink that increases its outer dimensions slightly.
+Ce modèle 3D peut servir de référence pour la conception de boitier. Veuillez noter que le module Reach comporte une enveloppe protectrice thermorétrécissable qui augmente légèrement ses dimensions extérieures.
 
 <script src="https://embed.github.com/view/3d/emlid/hardware/master/Reach.STL"></script>
 
-During case design keep in mind that you should not place anything close to the Wi-Fi antenna or performance might be degraded. Try to leave at least 5mm of distance to the closest object.
+Lors de la conception d'un boitier gardez à l'esprit que vous ne devez rien placer près de l'antenne Wi-Fi ou sinon les performances pourront être diminuées. Essayez de laisser au moins 5mm de distance à l'objet le plus proche.
 
-### 3D cases
+### Boitier 3D
 
 <div style="text-align: center;"><img src="../img/reach/specs/reach_in_case.jpg" style="width: 550px;"></div><br>
 
 
-The following printable 3D cases are available for Reach users:
+Les boitiers en impression 3D suivants sont disponibles pour les utilisateurs des modules Reach:
 
 **Reach case model C:**
 
 <script src="https://embed.github.com/view/3d/emlid/hardware/master/Reach_cases/Reach_case_assembly_Rev_C.STL"></script>
 
-Download [top and bottom halves](https://github.com/emlid/hardware/tree/master/Reach_cases/Rev_C_parts) of the case to print it.
+Télécharger la [moitié supérieure et inférieure](https://github.com/emlid/hardware/tree/master/Reach_cases/Rev_C_parts) du boitier pour l'imprimer en 3D.
 
 **Reach case model D:**
 
 <script src="https://embed.github.com/view/3d/emlid/hardware/master/Reach_cases/Reach_case_assembly_Rev_D.STL"></script>
 
-Download [top and bottom halves](https://github.com/emlid/hardware/tree/master/Reach_cases/Rev_D_parts) of the case to print it.
+Télécharger la [moitié supérieure et inférieure](https://github.com/emlid/hardware/tree/master/Reach_cases/Rev_D_parts) du boitier pour l'imprimer en 3D.
 
 **Reach case model E:**
 
 <script src="https://embed.github.com/view/3d/emlid/hardware/master/Reach_cases/Reach_case_assembly_Rev_E.STL"></script>
 
-Download [top and bottom halves](https://github.com/emlid/hardware/tree/master/Reach_cases/Rev_E_parts) of the case to print it.
+Télécharger la [moitié supérieure et inférieure](https://github.com/emlid/hardware/tree/master/Reach_cases/Rev_E_parts) du boitier pour l'imprimer en 3D.
 
-For assebmly cases D and E use DIN-7981 screw (thread size 2.2 mm, length either 6.5 or 9.5 mm). Model C can be assembled using scotch tape.
+Lors de l'assemblage, les boitiers D et E nécessitent une vise DIN-7981 (diamètre de filetage 2.2 mm, longueur 6.5 ou 9.5 mm). Le boitier C peut être assemblée avec un skotch.
 
-## Electrical specs
+## Caractéristiques électriques
 
-### Maximum ratings
+### Valeurs maximales
 
 |Name                                       | Value                |
 |-------------------------------------------|----------------------|

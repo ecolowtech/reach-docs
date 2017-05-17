@@ -1,26 +1,26 @@
-### A well-placed antenna is crucial to achieve good RTK positioning results
+### Bien positionner l'antenne est essentiel pour des solutions RTK de qualité
 
-You can place your smartphone near the window in your house and it will obtain GPS coordinates after some time, but for RTK such environment won't be sufficient. For RTK to work there are special requirements for antenna placement that are much more strict that for a standalone GPS.
+Vous pouvez disposer votre smartphone près d'une fenêtre dans votre maison et il recevera des coordonnées GPS après un certain temps, mais pour une utilisation RTK ces conditions ne seront pas suffisantes. Pour que le RTK fonctionne, cela nécessite des conditions précises de positionnement de l'antenne qui sont bien plus rigoureuses qu'un GPS autonome.
 
-#### No obstacles blocking the skyview
+#### Aucun obstacle obstruant le ciel
 
-Antenna needs to have a clear skyview 30 degrees above the horizon. There should be no obstacles that could block the view like: buildings, trees, cars, humans, laptops etc.
+L'antenne a besoin d'une vue du ciel dégagée de 30 degrés au dessus du niveau de l'horizon. Il ne doit y avoir aucun obstacle obstruant le ciel : bâtiments, arbres, véhicules, humains, ordinateurs portables, etc...
 
 <div style="text-align: center;"><img src="../img/reach/antenna-placement/skyview-obstacles.png" style="width: 550px;"></div><br>
 
 
-Examples of **bad** environments for antenna placement: indoors, urban areas, forest, close to the ground.
+Exemples de **mauvaises** conditions pour positionner l'antenne : en intérieur, zone urbaine, forêt, près du sol.
 
-Examples of **good** environments for antenna placement: field, top of the hill, rooftop of a building.
+Exemples de **bonnes** conditions pour positionner l'antenne : un champs, le sommet d'un colline, le toit d'un bâtiment
 
-#### No electronics nearby
+#### Aucun appareil électronique à proximité
 
-Electronic devices may produce RF noise that could affect reception of the GPS signal. Keep all electronics (including the Reach itself) as far as possible from the antenna.
+Les appareils électroniques peuvent produire des interférences radios qui peuvent nuire à la bonne réception des signaux GPS. Eloignez tout appareil électronique (également le module Reach lui-même) autant que possible de l'antenne.
 
-#### Ground plane
+#### Plan de masse
 
-Antenna has to be placed on a ground plane which reduces multipath, provides shielding and improves signal reception. Ground plane is a conductive plate, it may be a piece of metal, a roof of a car, a metal roof of a building, etc.
+L'antenne doit être posée sur un plan de masse qui réduit les trajets multiples, apporte un blindage et améliore la réception des signaux. Le plan de masse est une plaque conductrice, cela peut être un morceau de métal, le toit d'une voiture, le toit métallique d'un bâtiment, etc...
 
-Tallysman TW4721 requires ground plane no less than 70x70mm.
+L'antenne Tallysman TW4721 nécessite un plan de masse d'au moins 70x70mm
 
 <div style="text-align: center;"><img src="../img/reach/antenna-placement/antenna-ground-plane.png" style="width: 550px;"></div><br>

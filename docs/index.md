@@ -1,40 +1,40 @@
 <div style="text-align: center;"><img src="img/reach/Reach_400x400-400x380.png" style="width: 350px;"></div><br>
 
-### Reach RTK kit
+### Kit Reach RTK
 
-Reach RTK kit includes the following:
+Le kit Reach RTK comporte les éléments suivants:
 
-* 2x Reach RTK module
+* 2x module Reach RTK
 
-* 2x Tallysman TW4721 antenna with adhesive mount
+* 2x antenne Tallysman TW4721 avec support adhésif
 
-* 2x DF13 <-> DF13 straight cable
+* 2x câble droit DF13 <-> DF13
 
-* 2x DF13 <-> jumper wires cable
+* 2x câble DF13 <-> fil de raccordement
 
-* 2x Micro-USB <-> USB cable
+* 2x câble Micro-USB <-> USB cable
 
-* 2x Micro-USB <-> USB-F OTG cable
+* 2x câble Micro-USB <-> USB-F OTG
 
-### Standalone Reach unit
+### Unité autonome Reach
 
-Standalone Reach units come with the following:
+Les unités autonomes Reach comportent les éléments suivants:
 
-* Reach RTK module
+* module Reach RTK
 
-* DF13 <-> DF13 straight cable
+* câble droit DF13 <-> DF13
 
-* DF13 <-> jumper wires cable
+* câble DF13 <-> fil de raccordement
 
-* Micro-USB <-> USB cable
+* câble Micro-USB <-> USB
 
-* Micro-USB <-> USB-F OTG cable
+* câble Micro-USB <-> USB-F OTG
 
 
 ### Collaboration
 
-This document can be edited on GitHub in markdown. If you find any mistakes, typos or  pieces that are not documented well enough simply open an issue or contribute by sending a pull request.
+Ce document peut être édité sur Github au format markdown. Si vous trouvez des erreurs, coquilles ou des éléments qui ne seraient pas suffisamment documentés, signalez le problème ou contribuez en soumettant une requête de modification.
 
 ### Discussion
 
-We are happy to answer any questions at [community.emlid.com](http://community.emlid.com)
+Nous répondons volontiers à vos questions sur [community.emlid.com](http://community.emlid.com) (en anglais)

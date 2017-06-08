@@ -4,7 +4,7 @@
 ; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
 ;
 [subrepo]
-	remote = git@github.com:ecolowtech/reach-docs-common.git
+	remote = git@github.com-ecolowtech:ecolowtech/reach-docs-common.git
 	branch = fr
 	commit = 62ccb398a0ac3fd4809e2ffb58ffa755b8977fb0
 	parent = 0371689c4231195fc278555dc45739bb620b2dce

@@ -1,0 +1,902 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../../favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.5.0">
+    
+    
+      
+        <title>Post-traitement GPS - Reach RTK docs</title>
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-d848f886dc.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://emlid.com" title="Reach RTK docs" class="md-logo md-header-nav__button">
+            <img src="../../../img/logo.png" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Tutoriels
+                </span>
+              
+            
+            Post-traitement GPS
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Rechercher" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="Aucun document correspondant" data-md-lang-result-one="1 document correspondant" data-md-lang-result-other="# documents correspondants">
+            Taper pour commencer à chercher
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/ecolowtech/reach-docs" title="Aller au repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../../img/logo.png">
+      </i>
+    
+    Reach RTK docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/ecolowtech/reach-docs" title="Aller au repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../power-supply/" title="Alimentation" class="md-nav__link">
+      Alimentation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../antenna-placement/" title="Positionner l'antenne" class="md-nav__link">
+      Positionner l'antenne
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../hardware-integration/" title="Intégration matérielle" class="md-nav__link">
+      Intégration matérielle
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      ReachView
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        ReachView
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reachview/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reachview/settings/" title="Paramètres" class="md-nav__link">
+      Paramètres
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reachview/status/" title="Statut" class="md-nav__link">
+      Statut
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reachview/survey/" title="Relevés" class="md-nav__link">
+      Relevés
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reachview/rtk-settings/" title="Paramètres RTK" class="md-nav__link">
+      Paramètres RTK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reachview/correction-input/" title="Corrections en entrée" class="md-nav__link">
+      Corrections en entrée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reachview/position-output/" title="Export de la Position" class="md-nav__link">
+      Export de la Position
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reachview/base-mode/" title="Mode Station Fixe" class="md-nav__link">
+      Mode Station Fixe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reachview/logging/" title="Journalisation" class="md-nav__link">
+      Journalisation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reachview/camera-control/" title="Contrôler une caméra" class="md-nav__link">
+      Contrôler une caméra
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reachview/connectivity/" title="Wi-Fi/Bluetooth" class="md-nav__link">
+      Wi-Fi/Bluetooth
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reachview/firmware-reflashing/" title="Reprogrammer le Firmware" class="md-nav__link">
+      Reprogrammer le Firmware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../reachview/changelogs/" title="Changelogs" class="md-nav__link">
+      Changelogs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../led-status/" title="Signaux LED" class="md-nav__link">
+      Signaux LED
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../specs/" title="Specifications" class="md-nav__link">
+      Specifications
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../quickstart/" title="Démarrage rapide" class="md-nav__link">
+      Démarrage rapide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      Tutoriels
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Tutoriels
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rtk-introduction/" title="Comment fonctionne le RTK" class="md-nav__link">
+      Comment fonctionne le RTK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ardupilot-integration/" title="Intégration ArduPilot" class="md-nav__link">
+      Intégration ArduPilot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Post-traitement GPS
+      </label>
+    
+    <a href="./" title="Post-traitement GPS" class="md-nav__link md-nav__link--active">
+      Post-traitement GPS
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tables des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#donnees-requises" title="Données requises" class="md-nav__link">
+    Données requises
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convertir-les-logs-brutes-en-rinex" title="Convertir les logs brutes en RINEX" class="md-nav__link">
+    Convertir les logs brutes en RINEX
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#determiner-les-coordonnees-de-la-station-fixe-base" title="Déterminer les coordonnées de la station fixe (base)" class="md-nav__link">
+    Déterminer les coordonnées de la station fixe (base)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualiser-et-analyser-les-resultats" title="Visualiser et Analyser les résultats" class="md-nav__link">
+    Visualiser et Analyser les résultats
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mock-location/" title="Sortie Bluetooth et Positions Fictives Android" class="md-nav__link">
+      Sortie Bluetooth et Positions Fictives Android
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tables des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#donnees-requises" title="Données requises" class="md-nav__link">
+    Données requises
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convertir-les-logs-brutes-en-rinex" title="Convertir les logs brutes en RINEX" class="md-nav__link">
+    Convertir les logs brutes en RINEX
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#determiner-les-coordonnees-de-la-station-fixe-base" title="Déterminer les coordonnées de la station fixe (base)" class="md-nav__link">
+    Déterminer les coordonnées de la station fixe (base)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualiser-et-analyser-les-resultats" title="Visualiser et Analyser les résultats" class="md-nav__link">
+    Visualiser et Analyser les résultats
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ecolowtech/reach-docs/edit/master/docs/common/tutorials/gps-post-processing.md" title="Editer cette page" class="md-icon md-content__icon">edit</a>
+                
+                
+                  <h1>Post-traitement GPS</h1>
+                
+                <h2 id="donnees-requises">Données requises<a class="headerlink" href="#donnees-requises" title="Permanent link">&para;</a></h2>
+<p>Ce tutoriel nécessite:</p>
+<ul>
+<li>Les logs brutes du récepteur mobile (rover)</li>
+<li>Les logs brutes de la station fixe (base)</li>
+<li>(en option) Pour une précision absolue: les logs des observations RINEX d'une station de référence distante de moins de 100km</li>
+<li>(en option) Pour améliorer la précision du traitement: les fichiers d'éphéméridese et d'horloges précises issus de l'IGS</li>
+</ul>
+<p>Le parcours du récepteur mobile est calculé en position relative à la station fixe (base) donc pour avoir le parcours du récepteur mobile (rover) avec des coordonnées en précision absolue la position exacte de la station fixe (base) doit être connue. Il faut soit positionner la station fixe en un point de coordonnées connues ou les déterminer avec un post-traitement utilisant une station de référence et en étant en mode statique. Il est préférable que la station de référence soit dans un rayon de 100 km, mais un rayon plus important peut aussi fonctionner.</p>
+<h2 id="convertir-les-logs-brutes-en-rinex">Convertir les logs brutes en RINEX<a class="headerlink" href="#convertir-les-logs-brutes-en-rinex" title="Permanent link">&para;</a></h2>
+<p>Démarrer <a href="https://files.emlid.com/RTKLIB/rtkconv_emlid_b27.exe">RTKLIB RTKCONV</a> après avoir télécharger les fichiers brutes depuis le module Reach sur votre PC.</p>
+<ul>
+<li>Ajouter les logs brutes du récepteur mobile (rover) dans le premier champ et sélectionner le répertoire de sortie.</li>
+<li>Sélectionner le format de votre log dans le menu déroulant. Choisissez le format u-blox si les logs ont été téléchargés depuis chacun des appareils. Sinon, choisissez RTCM3 si les logs de la station fixe (base) et du récepteur mobile (rover) ont été récupérés depuis le récepteur mobile (rover).</li>
+</ul>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkconv_format.png" style="width: 600px;"></div>
+
+<ul>
+<li>Cliquez sur le bouton "Options".</li>
+<li>Choisissez "RINEX Version" 3.03.</li>
+<li>Activez les systèmes satellites "Satellites Systems" dont vous avez besoin.</li>
+<li>Appuyez sur "OK" et ensuite sur convertir "Convert".</li>
+</ul>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkconv_options.png" style="width: 600px;"></div>
+
+<p>Maintenant vous pouvez répétez l'opération avec les logs de la station fixe. Mais n'oubliez pas de changer de format.
+Après cette étape votre répertoire de sortir ressemblera à ça.</p>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkconv_output_folder.png" style="width: 600px;"></div>
+
+<h3 id="determiner-les-coordonnees-de-la-station-fixe-base">Déterminer les coordonnées de la station fixe (base)<a class="headerlink" href="#determiner-les-coordonnees-de-la-station-fixe-base" title="Permanent link">&para;</a></h3>
+<p>Démarrer le logiciel <a href="https://files.emlid.com/RTKLIB/rtkpost_emlid_b27.exe">RTKLIB RTKPOST</a> et remplissez les champs comme indiqué ici. Si vous le démarrez pour la première fois vous avez besoin de définir le mode statique (Static) ou cinématique (Kinematic) dans les options pour débloquer les champs correspondant aux données de la station fixe (base). Vous pouvez ignorer l'heure de départ (start time), ce n'est pas obligatoire.</p>
+<ul>
+<li>Sélectionner le fichier .obs du champs du récepteur mobile, le "rover". (Fichier RINEX issu du récepteur mobile, le "rover" en anglais)</li>
+<li>Sélectionner le fichier .obs du champs de la station fixe, la "base". (Fichier RINEX issu de la station fixe, la "base" en anglais)</li>
+<li>Sélectionner le fichier .nav de la station fixe (base) ou du récepteur mobile (rover) dans le troisième champ.</li>
+<li>(en option) Vous pouvez aussi lors de cette étape ajouter les éphémérides et horloges précises. Elles sont requises pour les grandes distances au référentiel (long baselines).</li>
+</ul>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkpost_adding_files.png" style="width: 600px;"></div>
+
+<p>Poursuivez ensuite en appuyant sur le bouton "Options".</p>
+<ul>
+<li>Sélectionnez le mode de positionnement "positioning mode" souhaité. Souvent cinématique (Kinematic) ou statique (static).</li>
+</ul>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkpost_setting1_mode.png" style="width: 600px;"></div>
+
+<ul>
+<li>Choisissez une valeur du masque d'élevation "Elevation Mask". Souvent entre 15 et 20 degrés.</li>
+<li>Appuyez sur le bouton concernant le masque du rapport signal-bruit "SNR Mask" et spécifier une valeur. Cela permettra de ne pas tenir compte des satellites avec des intensités de signaux trop faibles.</li>
+</ul>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkpost_setting1_mask.png" style="width: 600px;"></div>
+
+<ul>
+<li>Activez "Rec Dynamics" pour estimer la vitesse et l'accélération du récepteur mobile. À utiliser pour un usage différentiel DGPS/DGNSS ou les modes cinématiques (kinematic).</li>
+<li>Sélectionner les systèmes de navigation (navigation systems).</li>
+</ul>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkpost_setting1_dynamics.png" style="width: 600px;"></div>
+
+<ul>
+<li>Ouvrez l'onglet "Settings2".</li>
+<li>Paramétrez la résolution de l'ambiguïté à l'entier adéquat "Integer Ambiguity Res" à la valeur "Fix and Hold". Dans ce mode les ambiguïtés sont estimées et résolues en continu. Si la validation est OK, les ambiguïtés à l'entier adéquat sont fortement contraintes vers les valeurs calculées.</li>
+</ul>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkpost_setting2_ambiguity.png" style="width: 600px;"></div>
+
+<ul>
+<li>Spécifiez une valeur pour la variation maximale de la position liée à la résolution d'ambiguïté "Max Pos Var for AR" et activez le filtre de résolution d'ambiguïté "AR Filter" à droite.</li>
+</ul>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkpost_setting2_ar.png" style="width: 600px;"></div>
+
+<ul>
+<li>Passez à l'onglet "Positions"..</li>
+<li>Sélectionnez la station fixe "Base Station". Choisissez le moyennage de la position avec une solution SINGLE "Average of Single Position" en s'appuyant sur un fichier de log ou utilisez la position située dans l'en tête du fichier RINEX avec "RINEX Header Position" qui se basera sur l'en-tête du fichier .obs.</li>
+</ul>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkpost_positions_base.png" style="width: 600px;"></div>
+
+<ul>
+<li>Appuyez sur le bouton "OK" puis lancer le traitement avec "Execute" dans la fenêtre principale.</li>
+<li>Vous verrez une barre d'avancement verte. Patientez jusqu'à l'indication de fin "done". Cela peut prendre un temps conséquent si vos fichiers de logs sont volumineux. Dans ce cas la fenêtre ne répond plus à vos actions. Patientez alors tranquillement.</li>
+</ul>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkpost_execute.png" style="width: 600px;"></div>
+
+<p>Une fois terminé vous verrez à peu de choses près les fichiers suivants dans votre répertoire de sortie. Le fichier .pos avec "__event" contiendra les horodatages (timestamps) si vous en aviez durant votre relevé.</p>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkpost_output_folder.png" style="width: 600px;"></div>
+
+<h2 id="visualiser-et-analyser-les-resultats">Visualiser et Analyser les résultats<a class="headerlink" href="#visualiser-et-analyser-les-resultats" title="Permanent link">&para;</a></h2>
+<p>Ouvrez <a href="https://github.com/tomojitakasu/RTKLIB_bin/raw/rtklib_2.4.3/bin/rtkplot.exe">RTKLIB RTKPLOT</a> et glissez-déposez votre fichier ".pos".
+Si vous voyez des points verts cela signifie que la solution est FIX (Q=1), orange signifie FLOAT (Q=2) et rouge signifie SINGLE (Q=5).</p>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkplot_pos.png" style="width: 600px;"></div>
+
+<p>Ensuite vous pouvez ajouter votre fichier ".obs" pour obtenir plus d'outils d'analyse dans le menu déroulant.
+Par exemple, la première image affiche les visibilités satellites "Satellite Visibility" et la seconde la "Position" selon les 3 axes.</p>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkplot_satvis.png" style="width: 600px;"></div>
+
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkplot_position.png" style="width: 600px;"></div>
+
+<p>Si vous avez des marques temporelles vous pouvez les ajouter en tant que Solution-2 (File -&gt; Open Solution2).</p>
+<div style="text-align: center;"><img src="../img/reach/post-processing/rtkplot_timemarks.png" style="width: 600px;"></div>
+
+<p>Pas mal, non ?</p>
+<p>Tous les droits des fichiers de logs sont la propriétés de notre bon ami et excellent arpenteur Luke Wijnberg.</p>
+<p>Pour plus d'informations concernant les options de traitement, consultez le <a href="http://www.rtklib.com/prog/manual_2.4.2.pdf">manuel RTKLIB</a>.</p>
+<!--
+
+Maintenant changez d'onglet et activez la résolution d'ambiguïté GPS à "Fix-and-hold" et désactivez la pour Glonass en la mettant à "OFF". La résolution d'ambiguïté Glonass peut être activée si la station fixe (base) et le récepteur mobile (rover) sont tous les deux des modules Reach.
+
+![image](img/post-processing/Post3.PNG)
+
+Le fichier RINEX des observations de la station de référence inclut la position exacte dans l'en-tête du fichier, donc nous l'utiliserons pour la position de la station fixe (base). Ceci est vraiment important parce qu'il s'agit des coordonnées de références utilisées dans toute la procédure de post-traitement. Vous avez besoin d'un point connu à partir duquel vous baser.
+
+![image](img/post-processing/Post4.PNG)
+
+Vous pouvez maintenant cliquez sur "Execute" and vérifiez la qualité de la solution, Q=1 signifie FIX.
+
+![image](img/post-processing/Post5.PNG)
+
+Une fois les calculs terminés cliquez sur le bouton de création du graphique "Plot" pour afficher le tracé. Nous obtenons les coordonnées de la station fixe (base), enregistez-là nous allons l'utiliser dans l'étape suivante.
+
+![image](img/post-processing/POst6.PNG)
+
+### Calculer le tracé du récepteur mobile (rover)
+
+Parcourez votre disque jusqu'aux fichiers Rinex ".obs" de votre récepteur mobile (rover), ".obs" de votre station de référence (base) et fichier de navigation ".nav" issue de votre station fixe (base).
+
+![image](img/post-processing/Post7.PNG)
+
+Poursuivez dans les options et sélectionner le mode de positionnement "cinématique", pour indiquer à RTKLIB que le récepteur mobile était en mouvement. Sélectionner les systèmes de navigation et les options des filtres. Activez également le filtre dynamique "Rec Dynamics".
+
+![image](img/post-processing/Post8.PNG)
+
+Dans ce cas la résolution d'ambiguïté Glonass peut être activé à "ON", puisque les deux modules sont identiques.
+
+![image](img/post-processing/Post9.PNG)
+
+Nous arrivons alors à l'étape où nous avons besoin d'entrer les coordonnées de la station fixe (base) que nous avons calculés lors d'une étape précédente.
+
+![image](img/post-processing/Post10.PNG)
+
+Cliquez sur "Execute" puis affichez le résultat avec "Plot". Pas mal, mais certaines zones sont jaunes ce qui indique une solution FLOAT. Nous pouvons analyser les observations pour essayer de trouver la source du problème.
+
+![image](img/post-processing/Post11.PNG)
+
+Dans RTKPLOT allez dans file-> open observations et sélectionner le fichier d'observations du récepteur mobile (rover). Changez la vue pour afficher les visibilités satellites. Il se peut que vous ayez besoin d'aller dans les options de la vue et de sélectionner tous les systems de navigations "ALL" et de paramétrer l'option de saut de cycle "cycle slip" à "LLI flat" pour voir les données comme indiqué dans la figure. On peut remarquer que la réception est moins bonne au début, et nous pouvons donc les éliminer pour éviter que les filtres utilisent des données de mauvaise qualité.
+
+![image](img/post-processing/Post12.PNG)
+
+En affichant la vue "Position" il est évident que le décollage s'opère vers 14h05 et qu'ensuite la réception est bien meilleure.
+
+![image](img/post-processing/Post13.PNG)
+
+Relançons le post-traitement à nouveau, mais en supprimant les données avant 14h03.
+
+![image](img/post-processing/Post14.PNG)
+
+C'est bien mieux maintenant !
+
+![image](img/post-processing/Post15.PNG)
+
+Et qu'aurait-il pu se passer si nous n'avions pas utilisé la position exacte de la station fixe (base), mais simplement une solution SINGLE moyennée ? La figure affiche un zoom sur trois virages, où le tracé vert a été calculé en utilisant la position exacte de la station fixe (base), et le tracé bleu a été calculé sans utiliser la position exacte. Les deux tracés sont précis, mais le tracé bleu est décalé de plusieurs mètres.
+
+![image](img/post-processing/Post16.PNG) -->
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../../ardupilot-integration/" title="Intégration ArduPilot" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Précédent
+                </span>
+                Intégration ArduPilot
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../mock-location/" title="Sortie Bluetooth et Positions Fictives Android" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                Sortie Bluetooth et Positions Fictives Android
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+
+        <a href="http://emlid.com" title="Emlid">2017 Emlid.com</a>
+        <br />
+        Traduction <a href="http://ecolowtech.org" title="Ecolowtech">ecolowtech.org</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/emlid" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/emlidtech" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://facebook.com/emlidtech" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script>app.initialize({url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

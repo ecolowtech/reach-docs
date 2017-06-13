@@ -1,7 +1,7 @@
 site_name: Reach RTK docs
 theme_dir: docstheme/material
 site_favicon: favicon.ico
-repo_url: https://github.com/emlid/reach-docs
+repo_url: https://github.com/ecolowtech/reach-docs
 extra:
   palette:
     primary: light blue
@@ -28,28 +28,28 @@ markdown_extensions:
 
 pages:
 - Introduction: index.md
-- Power supply: power-supply.md
-- Antenna placement: antenna-placement.md
-- Hardware integration: hardware-integration.md
+- Alimentation: power-supply.md
+- Positionner l'antenne: antenna-placement.md
+- Intégration matérielle: hardware-integration.md
 - ReachView:
   - Introduction: common/reachview/index.md
-  - Settings: common/reachview/settings.md
-  - Status: common/reachview/status.md
-  - Survey: common/reachview/survey.md
-  - RTK settings: common/reachview/rtk-settings.md
-  - Correction input: common/reachview/correction-input.md
-  - Position output: common/reachview/position-output.md
-  - Base mode: common/reachview/base-mode.md
-  - Logging: common/reachview/logging.md
-  - Camera control: common/reachview/camera-control.md
+  - Paramètres: common/reachview/settings.md
+  - Statut: common/reachview/status.md
+  - Relevés: common/reachview/survey.md
+  - Paramètres RTK: common/reachview/rtk-settings.md
+  - Corrections en entrée: common/reachview/correction-input.md
+  - Export de la Position: common/reachview/position-output.md
+  - Mode Station Fixe: common/reachview/base-mode.md
+  - Journalisation: common/reachview/logging.md
+  - Contrôler une caméra: common/reachview/camera-control.md
   - Wi-Fi/Bluetooth: common/reachview/connectivity.md
-  - Firmware reflashing: common/reachview/firmware-reflashing.md
+  - Reprogrammer le Firmware: common/reachview/firmware-reflashing.md
   - Changelogs: common/reachview/changelogs.md
-- LED status: led-status.md
-- Specification: specs.md
-- Quickstart: quickstart.md
-- Tutorials:
-  - How RTK works: common/tutorials/rtk-introduction.md
-  - ArduPilot integration: ardupilot-integration.md
-  - GPS post-processing: common/tutorials/gps-post-processing.md
-  - Bluetooth output and Android mock location: common/tutorials/mock-location.md
+- Signaux LED: led-status.md
+- Specifications: specs.md
+- Démarrage rapide: quickstart.md
+- Tutoriels:
+  - Comment fonctionne le RTK: common/tutorials/rtk-introduction.md
+  - Intégration ArduPilot: ardupilot-integration.md
+  - Post-traitement GPS: common/tutorials/gps-post-processing.md
+  - Sortie Bluetooth et Positions Fictives Android: common/tutorials/mock-location.md

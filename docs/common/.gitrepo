@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com-ecolowtech:ecolowtech/reach-docs-common.git
 	branch = fr
-	commit = 577c60870982db1be1b91c2294dee5e71f6cc530
-	parent = 0cb786ff0757ecde94cf643368e1c024a1485123
+	commit = 15c4037d6e9479e089d2971abb4fe2e5d43f0218
+	parent = 86bbeeec1bc076b9754a73d5d11e3f2c82a5349a
 	cmdver = 0.3.1

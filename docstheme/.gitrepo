@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com-ecolowtech:ecolowtech/docstheme
+	branch = fr
+	commit = 3c3e0b303f7743b50fd480d04176fbbbc661f23e
+	parent = 17de5eabc48c0cf35193b5dd3490d2e4ffd3b765
+	cmdver = 0.3.1

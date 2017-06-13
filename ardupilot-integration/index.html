@@ -1,0 +1,929 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.5.0">
+    
+    
+      
+        <title>Intégration ArduPilot - Reach RTK docs</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-d848f886dc.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://emlid.com" title="Reach RTK docs" class="md-logo md-header-nav__button">
+            <img src="../img/logo.png" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Tutoriels
+                </span>
+              
+            
+            Intégration ArduPilot
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Rechercher" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="Aucun document correspondant" data-md-lang-result-one="1 document correspondant" data-md-lang-result-other="# documents correspondants">
+            Taper pour commencer à chercher
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/ecolowtech/reach-docs" title="Aller au repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../img/logo.png">
+      </i>
+    
+    Reach RTK docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/ecolowtech/reach-docs" title="Aller au repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../power-supply/" title="Alimentation" class="md-nav__link">
+      Alimentation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../antenna-placement/" title="Positionner l'antenne" class="md-nav__link">
+      Positionner l'antenne
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../hardware-integration/" title="Intégration matérielle" class="md-nav__link">
+      Intégration matérielle
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      ReachView
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        ReachView
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/reachview/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/reachview/settings/" title="Paramètres" class="md-nav__link">
+      Paramètres
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/reachview/status/" title="Statut" class="md-nav__link">
+      Statut
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/reachview/survey/" title="Relevés" class="md-nav__link">
+      Relevés
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/reachview/rtk-settings/" title="Paramètres RTK" class="md-nav__link">
+      Paramètres RTK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/reachview/correction-input/" title="Corrections en entrée" class="md-nav__link">
+      Corrections en entrée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/reachview/position-output/" title="Export de la Position" class="md-nav__link">
+      Export de la Position
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/reachview/base-mode/" title="Mode Station Fixe" class="md-nav__link">
+      Mode Station Fixe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/reachview/logging/" title="Journalisation" class="md-nav__link">
+      Journalisation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/reachview/camera-control/" title="Contrôler une caméra" class="md-nav__link">
+      Contrôler une caméra
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/reachview/connectivity/" title="Wi-Fi/Bluetooth" class="md-nav__link">
+      Wi-Fi/Bluetooth
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/reachview/firmware-reflashing/" title="Reprogrammer le Firmware" class="md-nav__link">
+      Reprogrammer le Firmware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/reachview/changelogs/" title="Changelogs" class="md-nav__link">
+      Changelogs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../led-status/" title="Signaux LED" class="md-nav__link">
+      Signaux LED
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../specs/" title="Specifications" class="md-nav__link">
+      Specifications
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../quickstart/" title="Démarrage rapide" class="md-nav__link">
+      Démarrage rapide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      Tutoriels
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Tutoriels
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/tutorials/rtk-introduction/" title="Comment fonctionne le RTK" class="md-nav__link">
+      Comment fonctionne le RTK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Intégration ArduPilot
+      </label>
+    
+    <a href="./" title="Intégration ArduPilot" class="md-nav__link md-nav__link--active">
+      Intégration ArduPilot
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tables des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#erb-protocol-specification" title="ERB Protocol specification" class="md-nav__link">
+    ERB Protocol specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" title="Requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-setup" title="Recommended setup" class="md-nav__link">
+    Recommended setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-reach-to-pixhawk" title="Connecting Reach to Pixhawk" class="md-nav__link">
+    Connecting Reach to Pixhawk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-reach-to-navio" title="Connecting Reach to Navio" class="md-nav__link">
+    Connecting Reach to Navio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-reach-to-work-with-ardupilot" title="Configuring Reach to work with ArduPilot" class="md-nav__link">
+    Configuring Reach to work with ArduPilot
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-a-correction-link" title="Setting up a correction link" class="md-nav__link">
+    Setting up a correction link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-radio-for-embedding-corrections-into-telemetry" title="Configuring radio for embedding corrections into telemetry" class="md-nav__link">
+    Configuring radio for embedding corrections into telemetry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-ardupilot-to-accept-reach-solution" title="Configuring ArduPilot to accept Reach solution" class="md-nav__link">
+    Configuring ArduPilot to accept Reach solution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-mission-planner-to-inject-rtk-corrections-into-telemetry" title="Configuring Mission planner to inject RTK corrections into telemetry" class="md-nav__link">
+    Configuring Mission planner to inject RTK corrections into telemetry
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/tutorials/gps-post-processing/" title="Post-traitement GPS" class="md-nav__link">
+      Post-traitement GPS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common/tutorials/mock-location/" title="Sortie Bluetooth et Positions Fictives Android" class="md-nav__link">
+      Sortie Bluetooth et Positions Fictives Android
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tables des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#erb-protocol-specification" title="ERB Protocol specification" class="md-nav__link">
+    ERB Protocol specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" title="Requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-setup" title="Recommended setup" class="md-nav__link">
+    Recommended setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-reach-to-pixhawk" title="Connecting Reach to Pixhawk" class="md-nav__link">
+    Connecting Reach to Pixhawk
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-reach-to-navio" title="Connecting Reach to Navio" class="md-nav__link">
+    Connecting Reach to Navio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-reach-to-work-with-ardupilot" title="Configuring Reach to work with ArduPilot" class="md-nav__link">
+    Configuring Reach to work with ArduPilot
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-a-correction-link" title="Setting up a correction link" class="md-nav__link">
+    Setting up a correction link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-radio-for-embedding-corrections-into-telemetry" title="Configuring radio for embedding corrections into telemetry" class="md-nav__link">
+    Configuring radio for embedding corrections into telemetry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-ardupilot-to-accept-reach-solution" title="Configuring ArduPilot to accept Reach solution" class="md-nav__link">
+    Configuring ArduPilot to accept Reach solution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-mission-planner-to-inject-rtk-corrections-into-telemetry" title="Configuring Mission planner to inject RTK corrections into telemetry" class="md-nav__link">
+    Configuring Mission planner to inject RTK corrections into telemetry
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ecolowtech/reach-docs/edit/master/docs/ardupilot-integration.md" title="Editer cette page" class="md-icon md-content__icon">edit</a>
+                
+                
+                  <h1>Intégration ArduPilot</h1>
+                
+                <p>Since ReachView version <strong>0.3.0</strong> Reach supports RTK-enhanced coordinates output to Navio and Pixhawk autopilots. To make this possible, we implemented a custom gps protocol we call <strong>ERB</strong>(Emlid Reach Binary protocol).</p>
+<p>Here is a demo video with our results:
+<div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/oq9H19ikAdM" frameborder="0" allowfullscreen></iframe></div></p>
+<h2 id="erb-protocol-specification">ERB Protocol specification<a class="headerlink" href="#erb-protocol-specification" title="Permanent link">&para;</a></h2>
+<p>Protocol description is available <a href="https://files.emlid.com/ERB.pdf">here</a>.</p>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<p>ERB support is included to ArduPilot starting with the following versions:</p>
+<ul>
+<li>ArduCopter 3.4</li>
+<li>ArduPlane  3.5.0</li>
+<li>APMrover   3.1</li>
+</ul>
+<h2 id="recommended-setup">Recommended setup<a class="headerlink" href="#recommended-setup" title="Permanent link">&para;</a></h2>
+<p>The setup we recommend goes as follows:</p>
+<ul>
+<li>Navio or Pixhawk with the ArduPilot firmware (not less version 3.4.0 for ArduCopter, 3.6.0 for ArduPlane and 3.0.1 for ArduRover). It's preferable to use the last stable version</li>
+<li>Base stations is a Reach unit in Wi-Fi AP mode, configured as a TCP server</li>
+<li>GCS is a laptop with Mission Planner(version 1.3.35 and higher), connected to the base Reach Wi-Fi hosted network</li>
+<li>Telemetry connection via a serial radio</li>
+<li>Rover Reach unit is mounted on a drone and connected to Navio or Pixhawk via the 6P-to-6P wire. This connection type will solve three problems at once: power Reach, allow ArduPilot board to pass base corrections and allow Reach to pass RTK solution back.</li>
+</ul>
+<p>The following guide will show how to configure both Navio or Pixhawk and Reach to work in this setup. If you wish alter to this workflow, it should be fairly easy to do so, as every part of the system is independent of others.</p>
+<h2 id="connecting-reach-to-pixhawk">Connecting Reach to Pixhawk<a class="headerlink" href="#connecting-reach-to-pixhawk" title="Permanent link">&para;</a></h2>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/pixhawk-reach-radio.png" style="width: 500px;"></div>
+
+<p>To provide RTK solution to Pixhawk, Reach needs to be connected via a serial port. You can do that by plugging the serial cable into Reach's upper DF13 port and Pixhawk's <strong>"Serial 4/5"</strong> connector.</p>
+<h2 id="connecting-reach-to-navio">Connecting Reach to Navio<a class="headerlink" href="#connecting-reach-to-navio" title="Permanent link">&para;</a></h2>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/navio2-reach.png" style="width: 500px;"></div>
+
+<p>Connect Reach's upper DF13 port with Navio's <strong>UART</strong> port.</p>
+<h2 id="configuring-reach-to-work-with-ardupilot">Configuring Reach to work with ArduPilot<a class="headerlink" href="#configuring-reach-to-work-with-ardupilot" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The serial connection is used to accept base corrections and send solution at the same time.</p>
+</div>
+<p>Start with <strong>"reach_kinematic_default.conf"</strong> configuration file. For both <strong>Input source for base corrections</strong> and <strong>Solution output</strong>(either 1 or 2) do the following:</p>
+<ul>
+<li>Select <strong>Serial</strong></li>
+<li>Choose <strong>UART</strong> as the serial device</li>
+<li>Choose the desired baud rate(38400 for default)</li>
+<li>Choose <strong>RTCM3</strong> as base corrections format</li>
+<li>Choose <strong>ERB</strong> as solution output format</li>
+</ul>
+<p><strong>ERB</strong> is a custom protocol, used to send location data to the autopilot.</p>
+<p>To load these settings, hit the <strong>Save</strong> button at the top, then agree to load the configuration onto Reach.</p>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/reach-settings.png" style="width: 350px;"></div>
+
+<h3 id="setting-up-a-correction-link">Setting up a correction link<a class="headerlink" href="#setting-up-a-correction-link" title="Permanent link">&para;</a></h3>
+<p>Reach supports a number of ways to accept <a href="../common/reachview/correction-input/#base-correction">base corrections</a>, including the popular in UAV area serial radios. However, having a separate radio link for base corrections only is highly ineffective.</p>
+<p>To solve this, you can use the telemetry radio as a carrier for RTK corrections. GCS can pass these corrections to the autopilot with a feature called <strong>GPS inject</strong>. This funcionality is available in <strong>Mission planner</strong> only.</p>
+<h3 id="configuring-radio-for-embedding-corrections-into-telemetry">Configuring radio for embedding corrections into telemetry<a class="headerlink" href="#configuring-radio-for-embedding-corrections-into-telemetry" title="Permanent link">&para;</a></h3>
+<p>With default settings radio telemetry is not optimised for sending RTK corrections. This may cause correction data delivery delays and even loss. These slips will deteriorate RTK solution quality, so we need to minimize them.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Radio configuration is done with telemetry disconnected.</p>
+</div>
+<p>To change radio settings, make sure <strong>Mavlink connection is disabled</strong>. Then, go to <strong>Initial setup</strong> menu, and select <strong>Sik Radio</strong> in the side menu. Click <strong>Load settings</strong> and wait for the parameters of both radios to load.</p>
+<p>You need to clear the field <strong>ECC</strong> and choose <strong>Raw Data</strong> in the Mavlink select field.</p>
+<p>After this, click <strong>Save settings</strong>. If your radio's firmware is outdated, update with <strong>Update Firmware(Local)</strong>.</p>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/mp-radio-setup.png" style="width: 800px;"></div>
+
+<h3 id="configuring-ardupilot-to-accept-reach-solution">Configuring ArduPilot to accept Reach solution<a class="headerlink" href="#configuring-ardupilot-to-accept-reach-solution" title="Permanent link">&para;</a></h3>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>It is recommended to use Reach as a second GPS unit only.</p>
+</div>
+<p>For launch ArduPilot on Navio add to your starting command the following argument:</p>
+<pre class="codehilite"><code class="language-bash">-E /dev/ttyAMA0</code></pre>
+
+
+<p>This will enable to use Reach as external GPS.</p>
+<p>ArduPilot configuration will require setting some parameters via Mission planner. After connecting, go to <strong>CONFIG/TUNING</strong> menu, then click <strong>Full parameters list</strong> on the left. To find the desired parameter more quickly, use a search box on the right(highlighted in red).</p>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/mp-full-parameter-list.png" style="width: 800px;"></div>
+
+<p>Start with settings <strong>GPS-TYPE2</strong> parameter to <strong>"1"</strong> - AUTO. This will enable the second GPS input.</p>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/mp-gps-type2-parameter.png" style="width: 800px;"></div>
+
+<p>Next, set <strong>SERIAL4_BAUD</strong> parameter to the same baud rate, as chosen in ReachView solution output. Note the options corresponding to the different baud rates.</p>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/mp-serial4-baud-parameter.png" style="width: 800px;"></div>
+
+<p>Set <strong>GPS_AUTO_SWITCH</strong> to <strong>"1"</strong> - Enabled. Autopilot will automatically switch between the two GPS receivers, picking the one with better solution.</p>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/mp-gps-auto-switch-parameter.png" style="width: 800px;"></div>
+
+<p>Finally, set <strong>GPS_INJECT_TO</strong> parameter to <strong>"1"</strong>. <strong>"1"</strong> here stands for the second GPS input. If you configured Reach as the first input, set this parameter to <strong>"0"</strong>.</p>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/mp-gps-inject-to-parameter.png" style="width: 800px;"></div>
+
+<h3 id="configuring-mission-planner-to-inject-rtk-corrections-into-telemetry">Configuring Mission planner to inject RTK corrections into telemetry<a class="headerlink" href="#configuring-mission-planner-to-inject-rtk-corrections-into-telemetry" title="Permanent link">&para;</a></h3>
+<p>To enable and configure GPS inject options in Mission planner press <strong>"ctrl+F"</strong> button combination. This will open a window with advanced GCS settings. Click <strong>Inject GPS</strong> button on the right.</p>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/mp-gps-inject-settings.png" style="width: 500px;"></div>
+
+<p>In the new window, choose parameters for base connection. Reach in base mode supports TCP and serial modes. For the sake of this example, <strong>let's assume base corrections are coming from another Reach in base TCP server mode</strong>. This is a setup we usually use in our test flights.</p>
+<p>In order to connect, choose TCP client mode in Mission Planner.</p>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/mp-gps-inject-connection-type.png" style="width: 500px;"></div>
+
+<p>Enter Base Reach's IP address.</p>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/mp-gps-inject-ip.png" style="width: 500px;"></div>
+
+<p>And port the server port number.</p>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/mp-gps-inject-port.png" style="width: 500px;"></div>
+
+<p>Finally, check the corrections are coming in.</p>
+<div style="text-align: center;"><img src="../img/reach/ardupilot-integration/mp-gps-inject-connected.png" style="width: 500px;"></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../common/tutorials/rtk-introduction/" title="Comment fonctionne le RTK" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Précédent
+                </span>
+                Comment fonctionne le RTK
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../common/tutorials/gps-post-processing/" title="Post-traitement GPS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                Post-traitement GPS
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+
+        <a href="http://emlid.com" title="Emlid">2017 Emlid.com</a>
+        <br />
+        Traduction <a href="http://ecolowtech.org" title="Ecolowtech">ecolowtech.org</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/emlid" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/emlidtech" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://facebook.com/emlidtech" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

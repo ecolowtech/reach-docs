@@ -1,0 +1,909 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../../favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.5.0">
+    
+    
+      
+        <title>Corrections en entrée - Reach RTK docs</title>
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-d848f886dc.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://emlid.com" title="Reach RTK docs" class="md-logo md-header-nav__button">
+            <img src="../../../img/logo.png" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  ReachView
+                </span>
+              
+            
+            Corrections en entrée
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Rechercher" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="Aucun document correspondant" data-md-lang-result-one="1 document correspondant" data-md-lang-result-other="# documents correspondants">
+            Taper pour commencer à chercher
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/ecolowtech/reach-docs" title="Aller au repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../../img/logo.png">
+      </i>
+    
+    Reach RTK docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/ecolowtech/reach-docs" title="Aller au repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../power-supply/" title="Alimentation" class="md-nav__link">
+      Alimentation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../antenna-placement/" title="Positionner l'antenne" class="md-nav__link">
+      Positionner l'antenne
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../hardware-integration/" title="Intégration matérielle" class="md-nav__link">
+      Intégration matérielle
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      ReachView
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        ReachView
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../settings/" title="Paramètres" class="md-nav__link">
+      Paramètres
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../status/" title="Statut" class="md-nav__link">
+      Statut
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../survey/" title="Relevés" class="md-nav__link">
+      Relevés
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rtk-settings/" title="Paramètres RTK" class="md-nav__link">
+      Paramètres RTK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Corrections en entrée
+      </label>
+    
+    <a href="./" title="Corrections en entrée" class="md-nav__link md-nav__link--active">
+      Corrections en entrée
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tables des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#correction-de-la-station-fixe-base-correction" title="Correction de la station fixe (Base correction)" class="md-nav__link">
+    Correction de la station fixe (Base correction)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liaison-serie-serial" title="Liaison Série (Serial)" class="md-nav__link">
+    Liaison Série (Serial)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uart" title="UART" class="md-nav__link">
+    UART
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-to-pc" title="USB-to-PC" class="md-nav__link">
+    USB-to-PC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-otg" title="USB OTG" class="md-nav__link">
+    USB OTG
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntrip" title="NTRIP" class="md-nav__link">
+    NTRIP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp" title="TCP" class="md-nav__link">
+    TCP
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serveur" title="Serveur" class="md-nav__link">
+    Serveur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client" title="Client" class="md-nav__link">
+    Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radio-lora-seulement-reach-rs" title="Radio LoRa (seulement Reach RS)" class="md-nav__link">
+    Radio LoRa (seulement Reach RS)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correction-supplementaire-additional-correction" title="Correction supplémentaire (Additional correction)" class="md-nav__link">
+    Correction supplémentaire (Additional correction)
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../position-output/" title="Export de la Position" class="md-nav__link">
+      Export de la Position
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../base-mode/" title="Mode Station Fixe" class="md-nav__link">
+      Mode Station Fixe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../logging/" title="Journalisation" class="md-nav__link">
+      Journalisation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../camera-control/" title="Contrôler une caméra" class="md-nav__link">
+      Contrôler une caméra
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connectivity/" title="Wi-Fi/Bluetooth" class="md-nav__link">
+      Wi-Fi/Bluetooth
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../firmware-reflashing/" title="Reprogrammer le Firmware" class="md-nav__link">
+      Reprogrammer le Firmware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../changelogs/" title="Changelogs" class="md-nav__link">
+      Changelogs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../led-status/" title="Signaux LED" class="md-nav__link">
+      Signaux LED
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../specs/" title="Specifications" class="md-nav__link">
+      Specifications
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../quickstart/" title="Démarrage rapide" class="md-nav__link">
+      Démarrage rapide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Tutoriels
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Tutoriels
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/rtk-introduction/" title="Comment fonctionne le RTK" class="md-nav__link">
+      Comment fonctionne le RTK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ardupilot-integration/" title="Intégration ArduPilot" class="md-nav__link">
+      Intégration ArduPilot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/gps-post-processing/" title="Post-traitement GPS" class="md-nav__link">
+      Post-traitement GPS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/mock-location/" title="Sortie Bluetooth et Positions Fictives Android" class="md-nav__link">
+      Sortie Bluetooth et Positions Fictives Android
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tables des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#correction-de-la-station-fixe-base-correction" title="Correction de la station fixe (Base correction)" class="md-nav__link">
+    Correction de la station fixe (Base correction)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liaison-serie-serial" title="Liaison Série (Serial)" class="md-nav__link">
+    Liaison Série (Serial)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uart" title="UART" class="md-nav__link">
+    UART
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-to-pc" title="USB-to-PC" class="md-nav__link">
+    USB-to-PC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-otg" title="USB OTG" class="md-nav__link">
+    USB OTG
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntrip" title="NTRIP" class="md-nav__link">
+    NTRIP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp" title="TCP" class="md-nav__link">
+    TCP
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serveur" title="Serveur" class="md-nav__link">
+    Serveur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client" title="Client" class="md-nav__link">
+    Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radio-lora-seulement-reach-rs" title="Radio LoRa (seulement Reach RS)" class="md-nav__link">
+    Radio LoRa (seulement Reach RS)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correction-supplementaire-additional-correction" title="Correction supplémentaire (Additional correction)" class="md-nav__link">
+    Correction supplémentaire (Additional correction)
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ecolowtech/reach-docs/edit/master/docs/common/reachview/correction-input.md" title="Editer cette page" class="md-icon md-content__icon">edit</a>
+                
+                
+                  <h1>Corrections en entrée</h1>
+                
+                <h2 id="correction-de-la-station-fixe-base-correction">Correction de la station fixe (Base correction)<a class="headerlink" href="#correction-de-la-station-fixe-base-correction" title="Permanent link">&para;</a></h2>
+<p>Paramétrer les flux de correction est nécessaire si vous voulez allez plus loin qu'une utilisation en mode autonome. Le module Reach support plusieurs formats de correction en entrée: RTCM2, RTCM3, OEM4, OEM3, UBX, SS2, HEMIS, SKYTRAQ, SP3. RTCM3 est le format le plus répandu du secteur. Les données de tous ces formats peuvent être reçues via une liaison série (Serial), TCP, NTRIP ou LoRa avec un Reach RS.</p>
+<h3 id="liaison-serie-serial">Liaison Série (Serial)<a class="headerlink" href="#liaison-serie-serial" title="Permanent link">&para;</a></h3>
+<p style="text-align:center" ><img src="../img/reachview/correction_input/serial.png" style="width: 800px;" /></p>
+
+<p>La connexion au port série est disponible avec différentes options de connexion matérielle. Toutes supportent les vitesses de transmission suivantes: 4800, 9600, 14400, 19200, 28800, 38400, 56000, 57600, 115200, 128000, 153600, 230400, 256000, 460800, 921600</p>
+<h4 id="uart">UART<a class="headerlink" href="#uart" title="Permanent link">&para;</a></h4>
+<p>Correspond à l'UART TTL du module Reach ou le port RS232 du connecteur d'extension disponible sur le Reach RS. C'est un cas usuel que d'y connecter la radio pour transmettre les données de correction.</p>
+<h4 id="usb-to-pc">USB-to-PC<a class="headerlink" href="#usb-to-pc" title="Permanent link">&para;</a></h4>
+<p>Quand le module Reach est connecté à un ordinateur via USB il sera visible en tant que différents appareils, l'un d'entre eux est via un port série. Vous pouvez utiliser ce port série pour envoyer les données de correction à l'ordinateur.</p>
+<h4 id="usb-otg">USB OTG<a class="headerlink" href="#usb-otg" title="Permanent link">&para;</a></h4>
+<p>Utiliser un cable micro-USB OTG pour connecter des accessoires USB. Dans ce mode là seulement les appareils USB qui émulent un port série peuvent être utilisés. Exemples de puces répandues qui sont supportées : FT232, CP2102. Il y a de nombreux appareils basés sur ces puces qui peuvent vous fournir un UART TTL ou un port RS232. C'est aussi une solution simple pour connecter des modems radio.</p>
+<h3 id="ntrip">NTRIP<a class="headerlink" href="#ntrip" title="Permanent link">&para;</a></h3>
+<p style="text-align:center" ><img src="../img/reachview/correction_input/ntrip.png" style="width: 800px;" /></p>
+
+<p>NTRIP est la norme du secteur pour transférer les corrections GNSS via Internet, avec ReachView vous pouvez utiliser tout service publique ou votre propre fournisseur privé. NTRIP ne permet pas une communication point à point, par exemple vous ne pouvez pas l'utiliser pour transmettre les corrections d'un module Reach à un autre directement. Dans la terminolgie NTRIP il y a des serveurs, des clients et des diffuseurs. Le serveur envoie les corrections au diffuseur et les clients peuvent les recevoir en se connectant à ce diffuseur.</p>
+<p>Pour envoyer des correction à un diffuseur NTRIP vous avez besoin de:</p>
+<ul>
+<li>l'adresse IP ou nom de domaine du diffuseur</li>
+<li>port</li>
+<li>nom d'utilisateur</li>
+<li>mot de passe</li>
+<li>point de montage</li>
+<li>format (souvent RTCM3)</li>
+</ul>
+<p>Quand la connexion est effectuée avec un point de montage qui dispose de la fonctionnalité VRS (Station de Référence Virtuel ou Virtual Reference Station) ou de plus proche proximité (Nearest), ce qui vous permet de vous connecter automatiquement à la station fixe la plus proche, il est nécessaire de renvoyer votre position au diffuseur (caster). Cochez alors la case “Send NMEA GGA messages to the corrections provider” et une fois que le module Reach a calculé une solution SINGLE il commencera à l'envoyer au diffuseur (caster).</p>
+<h3 id="tcp">TCP<a class="headerlink" href="#tcp" title="Permanent link">&para;</a></h3>
+<p style="text-align:center" ><img src="../img/reachview/correction_input/tcp.png" style="width: 800px;" /></p>
+
+<p>Un scénario typique pour utiliser l'entrée TCP pour une correction est quand le station fixe (base) et le récepteur mobile (rover) sont sur le même réseau. Notez que lorsque les appareils sont sur des réseaux différents vous ne pouvez pas transmettre de données directement à moins que les adresses IP publiques soient connues et que les routeurs sont configurés avec une redirection de port. Le protocol TCP peut aussi être utilisé pour envoyer ou recevoir des données depuis un serveur distant avec une IP publique.</p>
+<p>Le protocol TCP fonctionne avec deux modes:</p>
+<h4 id="serveur">Serveur<a class="headerlink" href="#serveur" title="Permanent link">&para;</a></h4>
+<p>Vous devez renseigner le port et ensuite les clients seront en mesure de se connecter à cet appareil sur son adresse IP. Plusieurs clients peuvent se connecter au même serveur.</p>
+<h4 id="client">Client<a class="headerlink" href="#client" title="Permanent link">&para;</a></h4>
+<p>Vous devez renseigner l'adresse IP et le numéro du port du serveur.</p>
+<p>Si ReachView ne permet pas de renseigner un port spécifique, cela signifie qu'il est utilisé pour un usage interne.</p>
+<h3 id="radio-lora-seulement-reach-rs">Radio LoRa (seulement Reach RS)<a class="headerlink" href="#radio-lora-seulement-reach-rs" title="Permanent link">&para;</a></h3>
+<p style="text-align:center" ><img src="../img/reachview/correction_input/Lora.png" style="width: 800px;" /></p>
+
+<p>Le Reach RS possède un radio LoRa interne qui est utilisée pour recevoir et envoyer les corrections. La radio fonctionne dans un seul sens, elle peut être configurée soit pour envoyer des corrections (depuis la station fixe ou base) ou pour les recevoir (récepteur mobile ou rover). En utilisant la modulation LoRa il est possible d'atteindre une portée de 19km en ligne de visée directe ou de quelques kilomètres en zone urbaine avec seulement 20 dBm de puissance de sortie. Tant que les paramètres de fréquence et de vitesse de transmission correspondent il est possible de connecter un nombre infini de récepteur mobile qui peuvent alors recevoir les corrections depuis une même station fixe (base).</p>
+<p>Les vitesses de transmission sur les Reach RS émetteurs (base) et récepteurs (rover) doivent correspondre.</p>
+<h2 id="correction-supplementaire-additional-correction">Correction supplémentaire (Additional correction)<a class="headerlink" href="#correction-supplementaire-additional-correction" title="Permanent link">&para;</a></h2>
+<p>Sera utilisé pour des horloges et éphémérides précises. Pas encore implémenté.</p>
+<p style="text-align:center" ><img src="../img/reachview/correction_input/additional.png" style="width: 800px;" /></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../rtk-settings/" title="Paramètres RTK" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Précédent
+                </span>
+                Paramètres RTK
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../position-output/" title="Export de la Position" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                Export de la Position
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+
+        <a href="http://emlid.com" title="Emlid">2017 Emlid.com</a>
+        <br />
+        Traduction <a href="http://ecolowtech.org" title="Ecolowtech">ecolowtech.org</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/emlid" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/emlidtech" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://facebook.com/emlidtech" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script>app.initialize({url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1123 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../../favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.5.0">
+    
+    
+      
+        <title>Mode Station Fixe - Reach RTK docs</title>
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-d848f886dc.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://emlid.com" title="Reach RTK docs" class="md-logo md-header-nav__button">
+            <img src="../../../img/logo.png" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  ReachView
+                </span>
+              
+            
+            Mode Station Fixe
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Rechercher" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="Aucun document correspondant" data-md-lang-result-one="1 document correspondant" data-md-lang-result-other="# documents correspondants">
+            Taper pour commencer à chercher
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/ecolowtech/reach-docs" title="Aller au repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../../img/logo.png">
+      </i>
+    
+    Reach RTK docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/ecolowtech/reach-docs" title="Aller au repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../power-supply/" title="Alimentation" class="md-nav__link">
+      Alimentation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../antenna-placement/" title="Positionner l'antenne" class="md-nav__link">
+      Positionner l'antenne
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../hardware-integration/" title="Intégration matérielle" class="md-nav__link">
+      Intégration matérielle
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      ReachView
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        ReachView
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../settings/" title="Paramètres" class="md-nav__link">
+      Paramètres
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../status/" title="Statut" class="md-nav__link">
+      Statut
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../survey/" title="Relevés" class="md-nav__link">
+      Relevés
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rtk-settings/" title="Paramètres RTK" class="md-nav__link">
+      Paramètres RTK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../correction-input/" title="Corrections en entrée" class="md-nav__link">
+      Corrections en entrée
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../position-output/" title="Export de la Position" class="md-nav__link">
+      Export de la Position
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Mode Station Fixe
+      </label>
+    
+    <a href="./" title="Mode Station Fixe" class="md-nav__link md-nav__link--active">
+      Mode Station Fixe
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tables des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sortie-du-flux-de-correction-correction-output" title="Sortie du flux de correction (Correction output)" class="md-nav__link">
+    Sortie du flux de correction (Correction output)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liaison-serie-serial" title="Liaison Série (Serial)" class="md-nav__link">
+    Liaison Série (Serial)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uart" title="UART" class="md-nav__link">
+    UART
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-to-pc" title="USB-to-PC" class="md-nav__link">
+    USB-to-PC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-otg" title="USB OTG" class="md-nav__link">
+    USB OTG
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntrip" title="NTRIP" class="md-nav__link">
+    NTRIP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp" title="TCP" class="md-nav__link">
+    TCP
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serveur" title="Serveur" class="md-nav__link">
+    Serveur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client" title="Client" class="md-nav__link">
+    Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radio-lora-seulement-reach-rs" title="Radio LoRa (seulement Reach RS)" class="md-nav__link">
+    Radio LoRa (seulement Reach RS)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages-rtcm3" title="Messages RTCM3" class="md-nav__link">
+    Messages RTCM3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordonnees-de-la-station-fixe-base-position" title="Coordonnées de la station fixe (Base position)" class="md-nav__link">
+    Coordonnées de la station fixe (Base position)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manuel-manual" title="Manuel (Manual)" class="md-nav__link">
+    Manuel (Manual)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moyennage-average" title="Moyennage (Average)" class="md-nav__link">
+    Moyennage (Average)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../logging/" title="Journalisation" class="md-nav__link">
+      Journalisation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../camera-control/" title="Contrôler une caméra" class="md-nav__link">
+      Contrôler une caméra
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connectivity/" title="Wi-Fi/Bluetooth" class="md-nav__link">
+      Wi-Fi/Bluetooth
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../firmware-reflashing/" title="Reprogrammer le Firmware" class="md-nav__link">
+      Reprogrammer le Firmware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../changelogs/" title="Changelogs" class="md-nav__link">
+      Changelogs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../led-status/" title="Signaux LED" class="md-nav__link">
+      Signaux LED
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../specs/" title="Specifications" class="md-nav__link">
+      Specifications
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../quickstart/" title="Démarrage rapide" class="md-nav__link">
+      Démarrage rapide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Tutoriels
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Tutoriels
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/rtk-introduction/" title="Comment fonctionne le RTK" class="md-nav__link">
+      Comment fonctionne le RTK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ardupilot-integration/" title="Intégration ArduPilot" class="md-nav__link">
+      Intégration ArduPilot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/gps-post-processing/" title="Post-traitement GPS" class="md-nav__link">
+      Post-traitement GPS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/mock-location/" title="Sortie Bluetooth et Positions Fictives Android" class="md-nav__link">
+      Sortie Bluetooth et Positions Fictives Android
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tables des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sortie-du-flux-de-correction-correction-output" title="Sortie du flux de correction (Correction output)" class="md-nav__link">
+    Sortie du flux de correction (Correction output)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liaison-serie-serial" title="Liaison Série (Serial)" class="md-nav__link">
+    Liaison Série (Serial)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uart" title="UART" class="md-nav__link">
+    UART
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-to-pc" title="USB-to-PC" class="md-nav__link">
+    USB-to-PC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-otg" title="USB OTG" class="md-nav__link">
+    USB OTG
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntrip" title="NTRIP" class="md-nav__link">
+    NTRIP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp" title="TCP" class="md-nav__link">
+    TCP
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serveur" title="Serveur" class="md-nav__link">
+    Serveur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client" title="Client" class="md-nav__link">
+    Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radio-lora-seulement-reach-rs" title="Radio LoRa (seulement Reach RS)" class="md-nav__link">
+    Radio LoRa (seulement Reach RS)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages-rtcm3" title="Messages RTCM3" class="md-nav__link">
+    Messages RTCM3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordonnees-de-la-station-fixe-base-position" title="Coordonnées de la station fixe (Base position)" class="md-nav__link">
+    Coordonnées de la station fixe (Base position)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manuel-manual" title="Manuel (Manual)" class="md-nav__link">
+    Manuel (Manual)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moyennage-average" title="Moyennage (Average)" class="md-nav__link">
+    Moyennage (Average)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ecolowtech/reach-docs/edit/master/docs/common/reachview/base-mode.md" title="Editer cette page" class="md-icon md-content__icon">edit</a>
+                
+                
+                  <h1>Mode Station Fixe</h1>
+                
+                <h2 id="sortie-du-flux-de-correction-correction-output">Sortie du flux de correction (Correction output)<a class="headerlink" href="#sortie-du-flux-de-correction-correction-output" title="Permanent link">&para;</a></h2>
+<p style="text-align:center"><img src="../img/reachview/base_mode/output.png" style="width: 800px;"/></p>
+
+<p>Le module reach exporte le flux de correction selon le format standard RTCM3. Les données de correction peuvent être transmises par liaison série (Serial), TCP, NTRIP ou LoRa pour Reach RS.</p>
+<h3 id="liaison-serie-serial">Liaison Série (Serial)<a class="headerlink" href="#liaison-serie-serial" title="Permanent link">&para;</a></h3>
+<p>La connexion au port série est disponible avec différentes options de connexion matérielle. Toutes supportent les vitesses de transmission suivantes: 4800, 9600, 14400, 19200, 28800, 38400, 56000, 57600, 115200, 128000, 153600, 230400, 256000, 460800, 921600</p>
+<h4 id="uart">UART<a class="headerlink" href="#uart" title="Permanent link">&para;</a></h4>
+<p>Correspond à l'UART TTL du module Reach ou le port RS232 du connecteur d'extension disponible sur le Reach RS. C'est un cas usuel que d'y connecter la radio pour transmettre les données de correction.</p>
+<h4 id="usb-to-pc">USB-to-PC<a class="headerlink" href="#usb-to-pc" title="Permanent link">&para;</a></h4>
+<p>Quand le module Reach est connecté à un ordinateur via USB il sera visible en tant que différents appareils, l'un d'entre eux est via un port série. Vous pouvez utiliser ce port série pour envoyer les données de correction à l'ordinateur.</p>
+<h4 id="usb-otg">USB OTG<a class="headerlink" href="#usb-otg" title="Permanent link">&para;</a></h4>
+<p>Utiliser un cable micro-USB OTG pour connecter des accessoires USB. Dans ce mode là seulement les appareils USB qui émulent un port série peuvent être utilisés. Exemples de puces répandues qui sont supportées : FT232, CP2102. Il y a de nombreux appareils basés sur ces puces qui peuvent vous fournir un UART TTL ou un port RS232.</p>
+<h3 id="ntrip">NTRIP<a class="headerlink" href="#ntrip" title="Permanent link">&para;</a></h3>
+<p>NTRIP est la norme du secteur pour transférer les corrections GNSS via Internet, avec ReachView vous pouvez utiliser tout service publique ou votre propre fournisseur privé. NTRIP ne permet pas une communication point à point, par exemple vous ne pouvez pas l'utiliser pour transmettre les corrections d'un module Reach à un autre directement. Dans la terminolgie NTRIP il y a des serveurs, des clients et des diffuseurs. Le serveur envoie les corrections au diffuseur et les clients peuvent les recevoir en se connectant à ce diffuseur.</p>
+<p>Pour envoyer des correction à un diffuseur NTRIP vous avez besoin de:</p>
+<ul>
+<li>l'adresse IP ou nom de domaine du diffuseur</li>
+<li>port</li>
+<li>nom d'utilisateur</li>
+<li>mot de passe</li>
+<li>point de montage</li>
+</ul>
+<p>Quand un module Reach est connecté via NTRIP en mode station fixe (base), il agit en tant que serveur NTRIP.</p>
+<h3 id="tcp">TCP<a class="headerlink" href="#tcp" title="Permanent link">&para;</a></h3>
+<p>Le scénario typique pour utiliser TCP est d'envoyer les données de correction vers une application sur le même réseau ou sur un serveur avec une adresse IP publique.</p>
+<p>Le protocol TCP fonctionne avec deux modes:</p>
+<h4 id="serveur">Serveur<a class="headerlink" href="#serveur" title="Permanent link">&para;</a></h4>
+<p>Vous devez renseigner le port et ensuite les clients seront en mesure de se connecter à cet appareil sur son adresse IP. Plusieurs clients peuvent se connecter au même serveur.</p>
+<h4 id="client">Client<a class="headerlink" href="#client" title="Permanent link">&para;</a></h4>
+<p>Vous devez renseigner l'adresse IP et le numéro du port du serveur.</p>
+<p>Si ReachView ne permet pas de renseigner un port spécifique, cela signifie qu'il est utilisé pour un usage interne.</p>
+<h3 id="radio-lora-seulement-reach-rs">Radio LoRa (seulement Reach RS)<a class="headerlink" href="#radio-lora-seulement-reach-rs" title="Permanent link">&para;</a></h3>
+<p>Le Reach RS possède un radio LoRa interne qui est utilisée pour recevoir et envoyer les corrections. La radio fonctionne dans un seul sens, elle peut être configurée soit pour envoyer des corrections (depuis la station fixe ou base) ou pour les recevoir (récepteur mobile ou rover). En utilisant la modulation LoRa il est possible d'atteindre une portée de 19km en ligne de visée directe ou de quelques kilomètres en zone urbaine avec seulement 20 dBm de puissance de sortie. Tant que les paramètres de fréquence et de vitesse de transmission correspondent il est possible de connecter un nombre infini de récepteur mobile qui peuvent alors recevoir les corrections depuis une même station fixe (base).</p>
+<p>Plus la vitesse de transmission est faible, plus la portée effective sera grande. Selon votre selection de messages RTCM3 ReachView restreindra automatiquement les vitesses de transmission trop faibles. Il faut désactiver des messages de correction ou réduire leur fréquence d'envoi afin de débloquer des vitesses de transmission plus faibles.</p>
+<p>Les vitesses de transmission sur les Reach RS émetteurs (base) et récepteurs (rover) doivent correspondre.</p>
+<p>Veuillez vérifier que vous sélectionner des puissances d'émission et de fréquence en accord avec la règlementation de votre région.</p>
+<h2 id="messages-rtcm3">Messages RTCM3<a class="headerlink" href="#messages-rtcm3" title="Permanent link">&para;</a></h2>
+<p style="text-align:center"><img src="../img/reachview/base_mode/messages.png" style="width: 800px;"/></p>
+
+<table>
+<thead>
+<tr>
+<th>Messages RTCM3</th>
+<th>Messages minimaux requis</th>
+<th>@</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1002</td>
+<td>GPS L1 observations</td>
+<td>1 Hz</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>ARP station coordinate</td>
+<td>0.1 Hz</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Messages RTCM3</th>
+<th>Messages optionnels pour autres systèmes GNSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1010</td>
+<td>GLONASS L1 observation</td>
+</tr>
+<tr>
+<td>1097</td>
+<td>GALILEO MSM</td>
+</tr>
+<tr>
+<td>1107</td>
+<td>SBAS MSM</td>
+</tr>
+<tr>
+<td>1117</td>
+<td>QZSS MSM</td>
+</tr>
+<tr>
+<td>1127</td>
+<td>BeiDou MSM</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>RTCM3 messages</th>
+<th>Messages spécifiques pour applications atypiques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1008</td>
+<td>Antenna type</td>
+</tr>
+<tr>
+<td>1019</td>
+<td>GPS Ephemeris</td>
+</tr>
+<tr>
+<td>1020</td>
+<td>GLONASS Ephemeris</td>
+</tr>
+</tbody>
+</table>
+<p>Le sous-ensemble minimal nécessaire au fonctionnement en RTK est 1002 pour les observations GPS et 1006 pour les coordonnées de la station fixe (base). Activer plus de messages ou une fréquence d'envoi plus importante requiert une bande passante plus importante pour votre connexion.</p>
+<p>Voici une estimation en bps (bit par secondes) quand les messages sont configurés à 1 Hz:
+Here is an estimation of bps when messages are configured at 1 Hz:</p>
+<table>
+<thead>
+<tr>
+<th>Messages RTCM3</th>
+<th>Vitesse de transmission, bps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1002</td>
+<td>156</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>21</td>
+</tr>
+<tr>
+<td>1008</td>
+<td>68</td>
+</tr>
+<tr>
+<td>1010</td>
+<td>126.125</td>
+</tr>
+<tr>
+<td>1019</td>
+<td>976</td>
+</tr>
+<tr>
+<td>1020</td>
+<td>540</td>
+</tr>
+<tr>
+<td>1097</td>
+<td>754</td>
+</tr>
+<tr>
+<td>1107</td>
+<td>520</td>
+</tr>
+<tr>
+<td>1117</td>
+<td>520</td>
+</tr>
+<tr>
+<td>1127</td>
+<td>1573</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>N'oubliez pas, vous ne pouvez pas utiliser les message BeiDou 1127 et GLONASS 1010.</p>
+</div>
+<p>Voici quelques information à propos de chacun des messages issus du standard RTCM 10403.3 (Radio Technical Commission for Maritime Services, 2016):</p>
+<ul>
+<li><strong>Message Type 1002</strong> supporte le fonctionnement RTK mono-fréquence et inclut une indication du rapport porteuse-sur-bruit (carrier-to-noise ratio ou CNR en anglais) pour le satellite GPS, comme mesuré par la station de référence.</li>
+<li><strong>Message Type 1006</strong> fournit les coordonnées ECEF (earth-centered, earth-fixed) de l'antenne du point de référence (antenna reference point ou ARP en anglais) pour une station de référence et la hauteur de l'ARP au dessus du point de relevé.</li>
+<li><strong>Message Type 1008</strong> fourni une description ASCII de l'antenne de la station de référence ainsi que le numéro de série de l'antenne, ce qui permet de lever toute ambiguïté sur le numéro de modèle ou lot de production.</li>
+<li><strong>Message Type 1010</strong> supporte le fonctionnement RTK mono-fréquence et inclut une indication du rapport porteuse-sur-bruit (carrier-to-noise ratio ou CNR en anglais) pour le satellite GLONASS, comme mesuré par la station de référence.</li>
+<li><strong>Message Type 1019</strong> contient les informations sur les éphémérides du satellite GPS. <em>This message could be broadcast in the event that the IODC (Issue of Data, Clock) does not match the IODE (Issue of Data, Ephemeris), which would require the differential reference station to base corrections on the previous good satellite ephemeris. This would allow the user equipment just entering the differential system to utilize the corrections being broadcast for that ephemeris, and would support the use of the satellite for differential navigation despite the fact that the satellite ephemeris was in error. It is anticipated that this message type would be broadcast every 2 minutes or so while this condition persisted.
+Another use of the message is to assist user receivers to quickly acquire satellites. For example, if the user receiver has access to a wireless service with this message, rather than waiting until one satellite has been acquired and its almanac data processed, it can utilize the ephemeris information immediately.</em></li>
+<li><strong>Message Type 1020</strong> contient les informations sur les éphémérides du satellite GLONASS et possède les mêmes caractéristiques que le message 1019.</li>
+<li>
+<p><strong>Messages 1097 (GALILEO), 1107 (SBAS), 1117 (QZSS), 1127 (BeiDou)</strong> sont des messages MSM7 (Multiple Signal Messages). MSM7 sont des messages de haute précision ce qui siginifie qu'ils contiennent l'ensemble complet des observations RINEX avec résolution étendue: <em>Full GNSS Pseudoranges, Phase Ranges, Phase Range Rate and CNR (high resolution). Key features of the messages are as follows: Effective identification of satellites and their signals by introducing satellite and signal masks, Effective bit consumption for ‘transition GNSS periods’ by introducing cell masks, Effective decomposition of observables by introducing the rough/fine range concept, Effective scalability of different observables by introducing observation blocks, Expressing complete set of RINEX observations for all bands and all signals in the same units (milliseconds).</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>One of the most important data fields (DF) in MSM messages is the signal mask. It is a bitset indicating which signals from a given GNSS are available from at least one of the multitude of tracked satellites. Each bit in the signal mask is representative of a specific GNSS signal. The definition of the signal mask bits is different for each GNSS, and is provided for each GNSS separately.</em></p>
+</div>
+</li>
+</ul>
+<blockquote>
+<p><cite> Radio Technical Commission for Maritime Services. 2016. RTCM STANDARD 10403.3 DIFFERENTIAL GNSS (GLOBAL NAVIGATION SATELLITE SYSTEMS) SERVICES – VERSION 3. Virginia: Radio Technical Commission for Maritime Services, pp. 108-262</cite></p>
+</blockquote>
+<h2 id="coordonnees-de-la-station-fixe-base-position">Coordonnées de la station fixe (Base position)<a class="headerlink" href="#coordonnees-de-la-station-fixe-base-position" title="Permanent link">&para;</a></h2>
+<p style="text-align:center"><img src="../img/reachview/base_mode/position.png" style="width: 800px;"/></p>
+
+<p>Il existe deux principaux paramètres pour spécifier les coordonnées de la station fixe (base). Notez que le positionnement RTK est relatif à la position de la base, donc tout approximation dans sa position résultera en un décalage constant des coordonnées du récepteur mobile (rover). Pour beaucoup de cas d'utilisation ce n'est pas critique et moyenner des coordonnées issus d'une solution SINGLE peut suffir. Si votre cas d'utilisation nécessite des coordonnées en précision absolu pour le récepteur mobile alors les coordonnées précises de la station fixe (base) doivent être renseignées.</p>
+<h3 id="manuel-manual">Manuel (Manual)<a class="headerlink" href="#manuel-manual" title="Permanent link">&para;</a></h3>
+<p>Dans ce mode vous renseignez une coordonnée connue a priori en positionnant le module au dessus du point de levé. Les coordonnées doivent être entrées au format XYZ ECED ou au format Latitude et Longitude WGS84 et altitude ellipsoïdales WGS84. Le décalage de hauteur d'antenne est également renseigné lors de cette étape, le décalage étant limité à 6.5535m par le format des messages RTCM.</p>
+<h3 id="moyennage-average">Moyennage (Average)<a class="headerlink" href="#moyennage-average" title="Permanent link">&para;</a></h3>
+<p>Par défaut le module Reach effectuera un moyennage de la position de la station fixe (base) lors de chaque redémarrage. Cette fonctionnalité améliore significativement la configuration initiale sur un nouveau site, cependant elle ne fournit pas des coordonnées absolues correctes.</p>
+<p>ReachView possède une fonctionnalité unique qui lui permet de déterminer les coordonnées de la station fixe (base) alors qu'il fonctionne en tant que récepteur mobile (rover) en tandem avec une autre station fixe. Ceci est effectué en obtenant un position RTK "Fix", en la moyennant sur une certaine durée et en obtenant alors des coordonnées correctes pour la station fixe (base). Un exemple de scénario courant implique de configurer une station fixe locale en déterminant ses coordonnées via NTRIP et en diffusant ensuite les données de correction localement, ce qui permet ainsi de réduire la distance au référentiel (baseline) pour les récepteurs mobiles et donc améliorer la qualité du positionnement.</p>
+<p>Si la station de référence est trop éloignée il est possible de moyenner une solution FLOAT et de tout de même améliorer l'exactitude des coordonnées.</p>
+<p>Dans le cas où aucune correction n'est disponible lors de la configuration de la station fixe (base) ou si des coordonnées absolues ne sont pas nécessaires alors moyenner les coordonnées issues d'une solution SINGLE peut être suffisant.</p>
+<p><strong>Enregistrer des coordonnées moyennées pour le mode manuel</strong><br />
+Une fois que vous avez réussi à obtenir des coordonnées moyennées vous pouvez les enregistrer pour un usage ultérieur. Appuyez sur l'icône d'enregistrement des coordonnées "save coordinates" et la position sera enregistrée comme si elle avait été entrée en mode manuel. Ainsi lors de chaque redémarrage le module Reach diffusera cette position dans les messages de correction.</p>
+<p><strong>Recommencer le moyennage</strong><br />
+Si vous souhaitez recommencer le moyennage des coordonnées de la station fixe vous pouvez cliquer sur l'icône "repeat averaging". C'est particulièrement utile lors d'une situation où vous avez accidentellement déplacé le module Reach pendant le moyennage.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../position-output/" title="Export de la Position" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Précédent
+                </span>
+                Export de la Position
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../logging/" title="Journalisation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                Journalisation
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+
+        <a href="http://emlid.com" title="Emlid">2017 Emlid.com</a>
+        <br />
+        Traduction <a href="http://ecolowtech.org" title="Ecolowtech">ecolowtech.org</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/emlid" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/emlidtech" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://facebook.com/emlidtech" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script>app.initialize({url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

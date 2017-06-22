@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>/power-supply/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
      <loc>/antenna-placement/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +28,7 @@
     
     <url>
      <loc>/hardware-integration/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -37,79 +37,79 @@
         
     <url>
      <loc>/common/reachview/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/reachview/settings/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/reachview/status/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/reachview/survey/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/reachview/rtk-settings/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/reachview/correction-input/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/reachview/position-output/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/reachview/base-mode/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/reachview/logging/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/reachview/camera-control/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/reachview/connectivity/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/reachview/firmware-reflashing/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/reachview/changelogs/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -118,7 +118,7 @@
     
     <url>
      <loc>/led-status/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -126,7 +126,7 @@
     
     <url>
      <loc>/specs/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -134,7 +134,7 @@
     
     <url>
      <loc>/quickstart/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -143,25 +143,25 @@
         
     <url>
      <loc>/common/tutorials/rtk-introduction/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/ardupilot-integration/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/tutorials/gps-post-processing/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/common/tutorials/mock-location/</loc>
-     <lastmod>2017-06-13</lastmod>
+     <lastmod>2017-06-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

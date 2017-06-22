@@ -6,14 +6,16 @@ extra:
   palette:
     primary: light blue
     accent: light blue
+  logo_font: Kaushan Script
+  logo_text: Reach-RTK.eu
   logo: img/logo.png
   social:
     - type: github
-      link: https://github.com/emlid
+      link: https://github.com/ecolowtech
     - type: twitter
-      link: https://twitter.com/emlidtech
+      link: https://twitter.com/ecolowtech
     - type: facebook
-      link: https://facebook.com/emlidtech
+      link: https://facebook.com/ecolowtech
   google_analytics:
     - UA-100967086-1
     - auto

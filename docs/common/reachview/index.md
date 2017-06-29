@@ -77,7 +77,7 @@ Si le module Reach n'a pas réussi à se connecter au réseau Wi-Fi il passera a
 
 ### Mises à jour
 
-Si la connexion au Wi-Fi est réussi, vous pouvez maintenant [trouver le module Reach sur votre réseau](common/reachview/#resolving-ip) et ouvrir ReachView. Pendant la première installation, vous verrez l'utilitaire de mise à jour ReachView Updater. C'est une application distincte qui effectue des auto-tests, synchronisation d'horloge et met à jour l'application principale ReachView.
+Si la connexion au Wi-Fi est réussi, vous pouvez maintenant [trouver le module Reach sur votre réseau](#resolution-de-lip) et ouvrir ReachView. Pendant la première installation, vous verrez l'utilitaire de mise à jour ReachView Updater. C'est une application distincte qui effectue des auto-tests, synchronisation d'horloge et met à jour l'application principale ReachView.
 <p style="text-align:center"><img src="img/reachview/introduction/reach_view_updater_finish.png" style="width: 350px;"/></p>
 
 L'utilitaire de mise à jour ReachView Updater vérifiera si des mises à jours sont disponibles et les installera.

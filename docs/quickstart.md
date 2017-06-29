@@ -9,8 +9,8 @@ Dans ce tutorial rapide nous allons vous montrer comment configurer deux modules
 
 Ce tutoriel ne concerne qu'un seul cas d'usage. Pour obtenir plus d'informations, cliquez sur un de ces liens :
 
-* [Caractéristiques Mécaniques](specs/#mechanical-specs)
-* [Caractéristiques Electriques](specs/#electrical-specs)
+* [Caractéristiques Mécaniques](specs/#caracteristiques-mecaniques)
+* [Caractéristiques Electriques](specs/#caracteristiques-electriques)
 * [Intégration Matérielle](hardware-integration)
 * [Interface ReachView](common/reachview/)
 

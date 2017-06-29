@@ -5,7 +5,7 @@ Veuillez noter que vous n'avez pas besoin de faire cela à moins que vous voulez
 
 La plupart des fonctionnalités sont mises à disposition par l'application ReachView qui peut être mise à jour simplement en appuyant sur le bouton "Update" de l'interface.
 !!! note ""
-    Plus d'informations sur comment mettre à jour l'application ReachView est disponible dans la [section d'introduction](/#updating).
+    Plus d'informations sur comment mettre à jour l'application ReachView est disponible dans la [section d'introduction](/common/reachview/#mises-a-jour).
 
 ### Téléchargement du firmware Emlid Reach RTK
 

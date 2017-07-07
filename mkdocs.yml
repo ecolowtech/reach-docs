@@ -16,9 +16,9 @@ extra:
       link: https://twitter.com/ecolowtech
     - type: facebook
       link: https://facebook.com/ecolowtech
-  google_analytics:
-    - UA-100967086-1
-    - auto
+google_analytics:
+  - UA-100967086-1
+  - auto
 
 markdown_extensions:
   - markdown.extensions.admonition
